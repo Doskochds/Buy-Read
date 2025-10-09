@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DoskochKursova")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae6c1ef7ea45e2b922b8baa0e6b9dd78e4dd5954")]
 [assembly: System.Reflection.AssemblyProductAttribute("DoskochKursova")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DoskochKursova")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

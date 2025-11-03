@@ -36,5 +36,6 @@ namespace DoskochKursova.Models
         public string? FileName { get; set; }
 
         public ICollection<Chapter>? Chapters { get; set; }
+        public virtual ICollection<UserBook> UserBooks { get; set; }
     }
 }

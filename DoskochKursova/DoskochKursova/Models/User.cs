@@ -42,13 +42,12 @@ namespace DoskochKursova.Models
         public string Language { get; set; } = "uk"; 
 
 
-        // --- Навігаційні властивості (для Role) ---
-
-        // Foreign Key (RoleID)
-        [ForeignKey("Role")]
-        public int RoleId { get; set; } // RoleID(FK) 
-
         
+        [ForeignKey("Role")]
+        public int RoleId { get; set; } 
+        public virtual ICollection<UserBook> UserBooks { get; set; }
+
+
         public virtual Role Role { get; set; }
 
     }

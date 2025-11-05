@@ -1,21 +1,35 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using BookStore.Models;
 using DoskochKursova.Models;
-using System.Collections.Generic;
+using BookStore.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using DoskochKursova.Accounting;
 
 namespace DoskochKursova.Data
 {
-    public class StoreContext : DbContext
+    
+    public class StoreContext : IdentityDbContext<User, Role, int>
+    
     {
         public StoreContext(DbContextOptions<StoreContext> options)
             : base(options)
         {
         }
 
-        public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Book> Books { get; set; }
         public DbSet<Chapter> Chapters { get; set; }
         public DbSet<Discount> Discounts { get; set; }
+
+        public DbSet<UserBook> UserBooks { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+           
+            base.OnModelCreating(modelBuilder);
+
+            
+        }
     }
 }

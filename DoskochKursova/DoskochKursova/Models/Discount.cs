@@ -1,4 +1,4 @@
-﻿using DoskochKursova.Models;
+﻿using DoskochKursova.Books;
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -21,6 +21,6 @@ namespace BookStore.Models
         public DateTime EndDate { get; set; }
 
         public int? BookId { get; set; }
-        public Book? Book { get; set; }
+        //public Book? Book { get; set; }
     }
 }

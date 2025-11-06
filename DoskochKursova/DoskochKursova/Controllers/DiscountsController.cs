@@ -1,164 +1,164 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using BookStore.Models;
-using DoskochKursova.Data;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Threading.Tasks;
+//using Microsoft.AspNetCore.Mvc;
+//using Microsoft.AspNetCore.Mvc.Rendering;
+//using Microsoft.EntityFrameworkCore;
+//using BookStore.Models;
+//using DoskochKursova.Data;
 
-namespace DoskochKursova.Controllers
-{
-    public class DiscountsController : Controller
-    {
-        private readonly StoreContext _context;
+//namespace DoskochKursova.Controllers
+//{
+//    public class DiscountsController : Controller
+//    {
+//        private readonly StoreContext _context;
 
-        public DiscountsController(StoreContext context)
-        {
-            _context = context;
-        }
+//        public DiscountsController(StoreContext context)
+//        {
+//            _context = context;
+//        }
 
-        // GET: Discounts
-        public async Task<IActionResult> Index()
-        {
-            var storeContext = _context.Discounts.Include(d => d.Book);
-            return View(await storeContext.ToListAsync());
-        }
+//        // GET: Discounts
+//        public async Task<IActionResult> Index()
+//        {
+//            var storeContext = _context.Discounts.Include(d => d.Book);
+//            return View(await storeContext.ToListAsync());
+//        }
 
-        // GET: Discounts/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+//        // GET: Discounts/Details/5
+//        public async Task<IActionResult> Details(int? id)
+//        {
+//            if (id == null)
+//            {
+//                return NotFound();
+//            }
 
-            var discount = await _context.Discounts
-                .Include(d => d.Book)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (discount == null)
-            {
-                return NotFound();
-            }
+//            var discount = await _context.Discounts
+//                .Include(d => d.Book)
+//                .FirstOrDefaultAsync(m => m.Id == id);
+//            if (discount == null)
+//            {
+//                return NotFound();
+//            }
 
-            return View(discount);
-        }
+//            return View(discount);
+//        }
 
-        // GET: Discounts/Create
-        public IActionResult Create()
-        {
-            ViewData["BookId"] = new SelectList(_context.Books, "Id", "Title");
-            return View();
-        }
+//        // GET: Discounts/Create
+//        public IActionResult Create()
+//        {
+//            ViewData["BookId"] = new SelectList(_context.Books, "Id", "Title");
+//            return View();
+//        }
 
-        // POST: Discounts/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Percent,StartDate,EndDate,BookId")] Discount discount)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(discount);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["BookId"] = new SelectList(_context.Books, "Id", "Title", discount.BookId);
-            return View(discount);
-        }
+//        // POST: Discounts/Create
+//        // To protect from overposting attacks, enable the specific properties you want to bind to.
+//        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+//        [HttpPost]
+//        [ValidateAntiForgeryToken]
+//        public async Task<IActionResult> Create([Bind("Id,Name,Percent,StartDate,EndDate,BookId")] Discount discount)
+//        {
+//            if (ModelState.IsValid)
+//            {
+//                _context.Add(discount);
+//                await _context.SaveChangesAsync();
+//                return RedirectToAction(nameof(Index));
+//            }
+//            ViewData["BookId"] = new SelectList(_context.Books, "Id", "Title", discount.BookId);
+//            return View(discount);
+//        }
 
-        // GET: Discounts/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+//        // GET: Discounts/Edit/5
+//        public async Task<IActionResult> Edit(int? id)
+//        {
+//            if (id == null)
+//            {
+//                return NotFound();
+//            }
 
-            var discount = await _context.Discounts.FindAsync(id);
-            if (discount == null)
-            {
-                return NotFound();
-            }
-            ViewData["BookId"] = new SelectList(_context.Books, "Id", "Title", discount.BookId);
-            return View(discount);
-        }
+//            var discount = await _context.Discounts.FindAsync(id);
+//            if (discount == null)
+//            {
+//                return NotFound();
+//            }
+//            ViewData["BookId"] = new SelectList(_context.Books, "Id", "Title", discount.BookId);
+//            return View(discount);
+//        }
 
-        // POST: Discounts/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Percent,StartDate,EndDate,BookId")] Discount discount)
-        {
-            if (id != discount.Id)
-            {
-                return NotFound();
-            }
+//        // POST: Discounts/Edit/5
+//        // To protect from overposting attacks, enable the specific properties you want to bind to.
+//        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+//        [HttpPost]
+//        [ValidateAntiForgeryToken]
+//        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Percent,StartDate,EndDate,BookId")] Discount discount)
+//        {
+//            if (id != discount.Id)
+//            {
+//                return NotFound();
+//            }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(discount);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!DiscountExists(discount.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["BookId"] = new SelectList(_context.Books, "Id", "Title", discount.BookId);
-            return View(discount);
-        }
+//            if (ModelState.IsValid)
+//            {
+//                try
+//                {
+//                    _context.Update(discount);
+//                    await _context.SaveChangesAsync();
+//                }
+//                catch (DbUpdateConcurrencyException)
+//                {
+//                    if (!DiscountExists(discount.Id))
+//                    {
+//                        return NotFound();
+//                    }
+//                    else
+//                    {
+//                        throw;
+//                    }
+//                }
+//                return RedirectToAction(nameof(Index));
+//            }
+//            ViewData["BookId"] = new SelectList(_context.Books, "Id", "Title", discount.BookId);
+//            return View(discount);
+//        }
 
-        // GET: Discounts/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+//        // GET: Discounts/Delete/5
+//        public async Task<IActionResult> Delete(int? id)
+//        {
+//            if (id == null)
+//            {
+//                return NotFound();
+//            }
 
-            var discount = await _context.Discounts
-                .Include(d => d.Book)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (discount == null)
-            {
-                return NotFound();
-            }
+//            var discount = await _context.Discounts
+//                .Include(d => d.Book)
+//                .FirstOrDefaultAsync(m => m.Id == id);
+//            if (discount == null)
+//            {
+//                return NotFound();
+//            }
 
-            return View(discount);
-        }
+//            return View(discount);
+//        }
 
-        // POST: Discounts/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var discount = await _context.Discounts.FindAsync(id);
-            if (discount != null)
-            {
-                _context.Discounts.Remove(discount);
-            }
+//        // POST: Discounts/Delete/5
+//        [HttpPost, ActionName("Delete")]
+//        [ValidateAntiForgeryToken]
+//        public async Task<IActionResult> DeleteConfirmed(int id)
+//        {
+//            var discount = await _context.Discounts.FindAsync(id);
+//            if (discount != null)
+//            {
+//                _context.Discounts.Remove(discount);
+//            }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+//            await _context.SaveChangesAsync();
+//            return RedirectToAction(nameof(Index));
+//        }
 
-        private bool DiscountExists(int id)
-        {
-            return _context.Discounts.Any(e => e.Id == id);
-        }
-    }
-}
+//        private bool DiscountExists(int id)
+//        {
+//            return _context.Discounts.Any(e => e.Id == id);
+//        }
+//    }
+//}

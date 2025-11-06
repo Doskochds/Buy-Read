@@ -2,10 +2,11 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using DoskochKursova.Accounting;
+using DoskochKursova.Books;
 
 namespace DoskochKursova.Models
 {
-    
+
     public class UserBook
     {
         [Key]

@@ -4,10 +4,11 @@ using BookStore.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using DoskochKursova.Accounting;
+using DoskochKursova.Books;
 
 namespace DoskochKursova.Data
 {
-    
+
     public class StoreContext : IdentityDbContext<User, Role, int>
     
     {

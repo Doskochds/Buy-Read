@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity; // <-- Додано
+﻿using Microsoft.AspNetCore.Identity; 
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 using DoskochKursova.Models;

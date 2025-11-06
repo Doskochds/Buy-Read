@@ -1,4 +1,4 @@
-﻿using DoskochKursova.Models;
+﻿using DoskochKursova.Books;
 using System.ComponentModel.DataAnnotations;
 
 namespace DoskochKursova.Models

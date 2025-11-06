@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using DoskochKursova.Books;
 
 namespace DoskochKursova.Models
 {
@@ -17,7 +18,7 @@ namespace DoskochKursova.Models
         public decimal TotalAmount { get; set; }
 
         [StringLength(50)]
-        public string Status { get; set; } = "Pending"; // Pending, Completed, Cancelled
+        public string Status { get; set; } = "Pending"; 
 
         public ICollection<OrderItem> OrderItems { get; set; }
     }

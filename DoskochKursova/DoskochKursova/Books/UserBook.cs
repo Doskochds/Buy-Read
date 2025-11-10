@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using DoskochKursova.Accounting;
 using DoskochKursova.Books;
 
-namespace DoskochKursova.Models
+namespace DoskochKursova.Books
 {
 
     public class UserBook

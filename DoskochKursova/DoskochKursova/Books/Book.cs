@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using DoskochKursova.Books;
+using DoskochKursova.Models;
 
-namespace DoskochKursova.Models
+namespace DoskochKursova.Books
 {
     public class Book
     {

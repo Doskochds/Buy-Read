@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore.Identity; 
+﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
-using DoskochKursova.Models;
+using DoskochKursova.Books;
 
 namespace DoskochKursova.Accounting
 {
-    
+
     public class User : IdentityUser<int>
     {
         

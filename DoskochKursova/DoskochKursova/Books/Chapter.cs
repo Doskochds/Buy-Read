@@ -1,7 +1,7 @@
-﻿using DoskochKursova.Books;
+﻿using DoskochKursova.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace DoskochKursova.Models
+namespace DoskochKursova.Books
 {
     public class Chapter
     {

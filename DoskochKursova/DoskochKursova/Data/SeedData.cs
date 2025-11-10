@@ -3,6 +3,7 @@ using DoskochKursova.Data;
 using DoskochKursova.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using DoskochKursova.Books;
 
 namespace DoskochKursova.Data
 {

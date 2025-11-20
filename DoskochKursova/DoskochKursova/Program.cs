@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
+using DoskochKursova.Books;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,13 +28,7 @@ builder.Services.AddCors(options =>
         });
 });
 
-builder.Services.AddControllersWithViews()
-    .AddJsonOptions(options =>
-    {
-       
-        options.JsonSerializerOptions.ReferenceHandler =
-            System.Text.Json.Serialization.ReferenceHandler.Preserve;
-    });
+builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<StoreContext>(options =>
     options.UseMySql(
@@ -71,6 +66,7 @@ builder.Services.AddAuthentication(options =>
 });
 
 builder.Services.AddTransient<IEmailSender, EmailSender>();
+builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {

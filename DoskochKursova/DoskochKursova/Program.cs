@@ -8,6 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
 using DoskochKursova.Books;
+using DoskochKursova.Orders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -45,6 +46,8 @@ builder.Services.AddIdentity<User, Role>(options =>
 .AddEntityFrameworkStores<StoreContext>() 
 .AddDefaultTokenProviders();
 
+builder.Services.AddScoped<IOrderService, OrderService>();
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -68,6 +71,7 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddTransient<IEmailSender, EmailSender>();
 builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddScoped<ICommentService, CommentService>();
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo

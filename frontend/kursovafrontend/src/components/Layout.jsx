@@ -20,7 +20,7 @@ const Layout = () => {
             </main>
 
             <footer style={{ padding: '10px', background: '#f0f0f0', textAlign: 'center' }}>
-                <p>© 2025 Buy&Read. Курсова робота.</p>
+                <p>© 2025 Buy&Read. Курсова робота. Не забути зробити якусь фішку щоб показувала чи онлайн апішка</p>
             </footer>
         </div>
     );

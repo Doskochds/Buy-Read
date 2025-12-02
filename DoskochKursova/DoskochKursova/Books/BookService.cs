@@ -1,6 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using DoskochKursova.Data;
-
+using Microsoft.AspNetCore.Http;
+using System.IO;
+using System.Text;
+using DoskochKursova.Models;
 
 namespace DoskochKursova.Books
 {
@@ -13,10 +16,8 @@ namespace DoskochKursova.Books
             _context = context;
         }
 
-       
         public async Task<IEnumerable<BookListDto>> GetAllBooksAsync(string? searchTerm, int? categoryId)
         {
-            
             var query = _context.Books
                 .Include(b => b.Author)
                 .Include(b => b.Category)
@@ -24,7 +25,6 @@ namespace DoskochKursova.Books
 
             if (!string.IsNullOrWhiteSpace(searchTerm))
             {
-
                 query = query.Where(b => b.Title.Contains(searchTerm) || b.Author.Name.Contains(searchTerm));
             }
 
@@ -97,33 +97,102 @@ namespace DoskochKursova.Books
         {
             return _context.Books.Any(e => e.Id == id);
         }
+
         public async Task<(string Type, object Content)?> GetBookReadContentAsync(int bookId, int userId, bool isAdmin)
         {
-            
             bool hasAccess = await _context.UserBooks
                 .AnyAsync(ub => ub.UserId == userId && ub.BookId == bookId);
 
-            if (!hasAccess && !isAdmin) return null; 
+            if (!hasAccess && !isAdmin) return null;
 
             var book = await _context.Books
                 .Include(b => b.Chapters)
                 .FirstOrDefaultAsync(b => b.Id == bookId);
 
-            if (book == null) return null; 
+            if (book == null) return null;
 
             if (book.Chapters != null && book.Chapters.Any())
             {
                 var chapters = book.Chapters.Select(c => new ChapterListDto
-                { Id = c.Id, BookId = c.BookId, Title = c.Title }).ToList();
+                {
+                    Id = c.Id,
+                    BookId = c.BookId,
+                    Title = c.Title
+                }).ToList();
+
                 return ("Episodic", chapters);
             }
+
             else if (book.FileContent != null)
             {
-                var content = System.Text.Encoding.UTF8.GetString(book.FileContent);
-                return ("Simple", new { Content = content, Title = book.Title });
+                
+                var isText = book.FileName != null && (book.FileName.EndsWith(".txt") || book.FileName.EndsWith(".html"));
+
+                if (isText)
+                {
+                    var content = System.Text.Encoding.UTF8.GetString(book.FileContent);
+                    return ("Simple", new { Content = content, Title = book.Title });
+                }
+                else
+                {
+                 
+                    return ("File", new
+                    {
+                        Message = "Ця книга доступна у форматі файлу.",
+                        FileName = book.FileName,
+                        DownloadUrl = $"/api/Books/{bookId}/download"
+                    });
+                }
             }
 
             return ("Empty", null);
+        }
+
+        public async Task UploadFileAsync(int id, IFormFile file)
+        {
+            var book = await _context.Books.FindAsync(id);
+            if (book == null) return;
+
+            var extension = Path.GetExtension(file.FileName).ToLower();
+
+            if (extension == ".txt" || extension == ".html" || extension == ".htm")
+            {
+                using (var reader = new StreamReader(file.OpenReadStream()))
+                {
+                    var content = await reader.ReadToEndAsync();
+
+                    var chapter = new Chapter
+                    {
+                        BookId = id,
+                        Title = "Повний текст", 
+                        Content = content
+                    };
+
+                    _context.Chapters.Add(chapter);
+
+
+                    book.FileContent = null;
+                    book.FileName = null;
+                }
+            }
+            else
+            {
+                using (var memoryStream = new MemoryStream())
+                {
+                    await file.CopyToAsync(memoryStream);
+                    book.FileContent = memoryStream.ToArray();
+                    book.FileName = file.FileName;
+                }
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<(byte[] Content, string FileName)?> GetFileAsync(int id)
+        {
+            var book = await _context.Books.FindAsync(id);
+            if (book == null || book.FileContent == null) return null;
+            return (book.FileContent, book.FileName ?? "book.bin");
         }
     }
 }

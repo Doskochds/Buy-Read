@@ -4,13 +4,14 @@ using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace DoskochKursova.Books
 {
     [Route("api/[controller]")]
     [ApiController]
     public class BooksController : ControllerBase
     {
-        private readonly IBookService _bookService; 
+        private readonly IBookService _bookService;
 
         public BooksController(IBookService bookService)
         {
@@ -59,12 +60,39 @@ namespace DoskochKursova.Books
             return Ok(new { BookType = result.Value.Type, Data = result.Value.Content });
         }
 
+        [HttpPost("{id}/upload")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> UploadBookFile(int id, IFormFile file)
+        {
+            if (!_bookService.BookExists(id)) return NotFound();
+
+            if (file == null || file.Length == 0)
+                return BadRequest("Файл пустий");
+
+            await _bookService.UploadFileAsync(id, file);
+
+            return Ok(new { Message = $"Файл {file.FileName} успішно завантажено!" });
+        }
+
+
+        [HttpGet("{id}/download")]
+        [Authorize] 
+        public async Task<IActionResult> DownloadBookFile(int id)
+        {
+            var fileData = await _bookService.GetFileAsync(id);
+            if (fileData == null) return NotFound("Файл не знайдено");
+
+            return File(fileData.Value.Content, "application/octet-stream", fileData.Value.FileName);
+        }
+
         [HttpPost]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Create([FromBody] CreateBookDto bookDto)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
+
             var book = await _bookService.CreateBookAsync(bookDto);
+
             return Ok(new { Message = "Книгу створено", BookId = book.Id });
         }
 
@@ -94,7 +122,8 @@ namespace DoskochKursova.Books
             {
                 return NotFound();
             }
-            await _bookService.DeleteBookAsync(id);
+
+            await _bookService.DeleteBookAsync(id); 
             return NoContent();
         }
     }

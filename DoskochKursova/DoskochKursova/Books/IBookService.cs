@@ -10,8 +10,10 @@
         Task UpdateBookAsync(Book book);
         Task DeleteBookAsync(int id);
         bool BookExists(int id);
+        Task UploadFileAsync(int id, IFormFile file);
+        Task<(byte[] Content, string FileName)?> GetFileAsync(int id);
 
-        
+
         Task<(string Type, object Content)?> GetBookReadContentAsync(int bookId, int userId, bool isAdmin);
     }
 }

@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "dkRbF3Ch4BwxVu5jkN5VJ+/DstTE1E/YgukBGo/UVo4zZecc7YlJDBNX9HOcqR0vbGqoa6E0g4nnBO+hOOvmIA==",
+  "dgSpecHash": "ywCfUHQs7uOHKGbd6Rfr14lEiADC4QsIUZRbHjxDCaOKEWIZFNWkCtoyuHcpJQEp9G4XId9gRYf29C3smb6QMA==",
   "success": true,
   "projectFilePath": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\DoskochKursova.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell i7\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Dell i7\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\Dell i7\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
+    "C:\\Users\\Dell i7\\.nuget\\packages\\gtranslate\\2.3.1\\gtranslate.2.3.1.nupkg.sha512",
+    "C:\\Users\\Dell i7\\.nuget\\packages\\htmlagilitypack\\1.11.61\\htmlagilitypack.1.11.61.nupkg.sha512",
     "C:\\Users\\Dell i7\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Dell i7\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Dell i7\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

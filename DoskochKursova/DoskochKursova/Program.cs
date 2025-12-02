@@ -9,6 +9,8 @@ using System.Text;
 using Microsoft.OpenApi.Models;
 using DoskochKursova.Books;
 using DoskochKursova.Orders;
+using DoskochKursova.Translation;
+using GTranslate;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -72,6 +74,7 @@ builder.Services.AddTransient<IEmailSender, EmailSender>();
 builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddScoped<ICommentService, CommentService>();
+builder.Services.AddSingleton<ITranslationService, GoogleTranslationService>();
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo

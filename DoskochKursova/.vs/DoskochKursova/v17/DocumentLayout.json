@@ -3,11 +3,95 @@
   "WorkspaceRootPath": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\books\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|d:\\hnukursova\\kursovawb\\kursovawb\\buy-read\\doskochkursova\\doskochkursova\\books\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\books\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|d:\\hnukursova\\kursovawb\\kursovawb\\buy-read\\doskochkursova\\doskochkursova\\translation\\googletranslationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|d:\\hnukursova\\kursovawb\\kursovawb\\buy-read\\doskochkursova\\doskochkursova\\books\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\books\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|d:\\hnukursova\\kursovawb\\kursovawb\\buy-read\\doskochkursova\\doskochkursova\\books\\chapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\books\\chapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|d:\\hnukursova\\kursovawb\\kursovawb\\buy-read\\doskochkursova\\doskochkursova\\books\\chapterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\books\\chapterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\books\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\books\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\books\\bookdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\books\\bookdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\books\\createbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\books\\createbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\books\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\books\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\books\\booklistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\books\\booklistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Migrations\\20251203214350_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DoskochKursova\\Migrations\\20251203214350_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\accounting\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\accounting\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\accounting\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\accounting\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\accounting\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\accounting\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\accounting\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\accounting\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\accounting\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\accounting\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\migrations\\storecontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\migrations\\storecontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Migrations\\20251009065704_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:DoskochKursova\\Migrations\\20251009065704_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\orders\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\orders\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\orders\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\orders\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|d:\\hnukursova\\kursovawb\\kursovawb\\buy-read\\doskochkursova\\doskochkursova\\orders\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\orders\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\translation\\googletranslationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\translation\\googletranslationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,20 +99,8 @@
       "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\translation\\itranslationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\books\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\books\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\books\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\books\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\orders\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,14 +135,6 @@
       "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\data\\storecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\orders\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\orders\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\orders\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\orders\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\orders\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\orders\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -83,44 +147,16 @@
       "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\data\\storecontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\books\\userbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\books\\userbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\migrations\\20251105191008_addidentityanduserbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\migrations\\20251105191008_addidentityanduserbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Migrations\\20251009065704_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:DoskochKursova\\Migrations\\20251009065704_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\books\\bookdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\books\\bookdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\books\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\books\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\books\\createbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\books\\createbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\accounting\\forgotpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\accounting\\forgotpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\accounting\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\accounting\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\accounting\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\accounting\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -137,22 +173,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\accounting\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\accounting\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\accounting\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\accounting\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\accounting\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\accounting\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\accounting\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\accounting\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\migrations\\storecontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\migrations\\storecontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -203,10 +223,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:doskochkursova\\controllers\\discountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\books\\booklistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\books\\booklistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Migrations\\20251130220341_AddComments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:DoskochKursova\\Migrations\\20251130220341_AddComments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -230,40 +246,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GoogleTranslationService.cs",
-              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Translation\\GoogleTranslationService.cs",
-              "RelativeDocumentMoniker": "DoskochKursova\\Translation\\GoogleTranslationService.cs",
-              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Translation\\GoogleTranslationService.cs",
-              "RelativeToolTip": "DoskochKursova\\Translation\\GoogleTranslationService.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAQwDYAAAAFAAAA",
+              "DocumentIndex": 2,
+              "Title": "Chapter.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\Chapter.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Books\\Chapter.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\Chapter.cs",
+              "RelativeToolTip": "DoskochKursova\\Books\\Chapter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T22:54:54.488Z",
+              "WhenOpened": "2025-12-03T22:38:39.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChaptersController.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\ChaptersController.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Books\\ChaptersController.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\ChaptersController.cs",
+              "RelativeToolTip": "DoskochKursova\\Books\\ChaptersController.cs",
+              "ViewState": "AQIAAIQAAAAAAAAAAAAiwKEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T22:11:14.012Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "BooksController.cs",
-              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\BooksController.cs",
-              "RelativeDocumentMoniker": "DoskochKursova\\Books\\BooksController.cs",
-              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\BooksController.cs",
-              "RelativeToolTip": "DoskochKursova\\Books\\BooksController.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Title": "BookDetailsDto.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\BookDetailsDto.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Books\\BookDetailsDto.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\BookDetailsDto.cs",
+              "RelativeToolTip": "DoskochKursova\\Books\\BookDetailsDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T21:04:21.643Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Program.cs",
-              "RelativeDocumentMoniker": "DoskochKursova\\Program.cs",
-              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Program.cs",
-              "RelativeToolTip": "DoskochKursova\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEIAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T06:39:01.51Z"
+              "WhenOpened": "2025-11-19T23:15:26.76Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -273,14 +291,260 @@
               "RelativeDocumentMoniker": "DoskochKursova\\Books\\BookService.cs",
               "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\BookService.cs",
               "RelativeToolTip": "DoskochKursova\\Books\\BookService.cs",
-              "ViewState": "AQIAAKcAAAAAAAAAAADwv8UAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-18T21:35:25.179Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\Book.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Books\\Book.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\Book.cs",
+              "RelativeToolTip": "DoskochKursova\\Books\\Book.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAzwCMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T21:37:46.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\IBookService.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Books\\IBookService.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\IBookService.cs",
+              "RelativeToolTip": "DoskochKursova\\Books\\IBookService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T21:34:33.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\BooksController.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Books\\BooksController.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\BooksController.cs",
+              "RelativeToolTip": "DoskochKursova\\Books\\BooksController.cs",
+              "ViewState": "AQIAAGwAAAAAAAAAAAA3wIkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T21:04:21.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateBookDto.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\CreateBookDto.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Books\\CreateBookDto.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\CreateBookDto.cs",
+              "RelativeToolTip": "DoskochKursova\\Books\\CreateBookDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T21:33:37.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BookListDto.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\BookListDto.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Books\\BookListDto.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\BookListDto.cs",
+              "RelativeToolTip": "DoskochKursova\\Books\\BookListDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T21:33:59.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Program.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Program.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Program.cs",
+              "RelativeToolTip": "DoskochKursova\\Program.cs",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAAAJAAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T06:39:01.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20251203214350_1.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Migrations\\20251203214350_1.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Migrations\\20251203214350_1.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Migrations\\20251203214350_1.cs",
+              "RelativeToolTip": "DoskochKursova\\Migrations\\20251203214350_1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T21:43:51.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\EmailSender.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\EmailSender.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\EmailSender.cs",
+              "RelativeToolTip": "DoskochKursova\\Accounting\\EmailSender.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAA6wCgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T19:53:44.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\RegisterDto.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\RegisterDto.cs",
+              "RelativeToolTip": "DoskochKursova\\Accounting\\RegisterDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T19:47:16.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Role.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\Role.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\Role.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\Role.cs",
+              "RelativeToolTip": "DoskochKursova\\Accounting\\Role.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T18:55:03.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\User.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\User.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\User.cs",
+              "RelativeToolTip": "DoskochKursova\\Accounting\\User.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAkwBsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T18:52:53.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Data\\SeedData.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Data\\SeedData.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Data\\SeedData.cs",
+              "RelativeToolTip": "DoskochKursova\\Data\\SeedData.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAABYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T12:52:17.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\AccountController.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\AccountController.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\AccountController.cs",
+              "RelativeToolTip": "DoskochKursova\\Accounting\\AccountController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T06:26:07.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "StoreContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Migrations\\StoreContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Migrations\\StoreContextModelSnapshot.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Migrations\\StoreContextModelSnapshot.cs",
+              "RelativeToolTip": "DoskochKursova\\Migrations\\StoreContextModelSnapshot.cs",
+              "ViewState": "AQIAAKkBAAAAAAAAAAAmwCgCAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T08:19:09.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "20251009065704_InitialCreate.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Migrations\\20251009065704_InitialCreate.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Migrations\\20251009065704_InitialCreate.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Migrations\\20251009065704_InitialCreate.cs",
+              "RelativeToolTip": "DoskochKursova\\Migrations\\20251009065704_InitialCreate.cs",
+              "ViewState": "AQIAAK0AAAAAAAAAAAAAAK0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T06:57:05.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Orders\\OrdersController.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Orders\\OrdersController.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Orders\\OrdersController.cs",
+              "RelativeToolTip": "DoskochKursova\\Orders\\OrdersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T21:29:53.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Orders\\OrderService.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Orders\\OrderService.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Orders\\OrderService.cs",
+              "RelativeToolTip": "DoskochKursova\\Orders\\OrderService.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAFoAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T21:24:17.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "OrderDto.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Orders\\OrderDto.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Orders\\OrderDto.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Orders\\OrderDto.cs",
+              "RelativeToolTip": "DoskochKursova\\Orders\\OrderDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T20:45:34.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "GoogleTranslationService.cs",
+              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Translation\\GoogleTranslationService.cs",
+              "RelativeDocumentMoniker": "DoskochKursova\\Translation\\GoogleTranslationService.cs",
+              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Translation\\GoogleTranslationService.cs",
+              "RelativeToolTip": "DoskochKursova\\Translation\\GoogleTranslationService.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAQwDYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T22:54:54.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "ITranslationService.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Translation\\ITranslationService.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Translation\\ITranslationService.cs",
@@ -292,19 +556,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IBookService.cs",
-              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\IBookService.cs",
-              "RelativeDocumentMoniker": "DoskochKursova\\Books\\IBookService.cs",
-              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\IBookService.cs",
-              "RelativeToolTip": "DoskochKursova\\Books\\IBookService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T21:34:33.166Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 25,
               "Title": "Orders.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Orders\\Orders.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Orders\\Orders.cs",
@@ -316,7 +568,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 24,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\appsettings.json",
               "RelativeDocumentMoniker": "DoskochKursova\\appsettings.json",
@@ -328,7 +580,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 30,
               "Title": "CommentService.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\CommentService.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\CommentService.cs",
@@ -340,7 +592,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 26,
               "Title": "20251130220301_AddComments.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Migrations\\20251130220301_AddComments.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Migrations\\20251130220301_AddComments.cs",
@@ -352,7 +604,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 55,
               "Title": "20251130220341_AddComments.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Migrations\\20251130220341_AddComments.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Migrations\\20251130220341_AddComments.cs",
@@ -364,7 +616,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 29,
               "Title": "CommentsController.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\CommentsController.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\CommentsController.cs",
@@ -376,7 +628,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 28,
               "Title": "CommentDto.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\CommentDto.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\CommentDto.cs",
@@ -388,7 +640,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 27,
               "Title": "Comment.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\Comment.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\Comment.cs",
@@ -400,7 +652,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 31,
               "Title": "ICommentService.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\ICommentService.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\ICommentService.cs",
@@ -412,31 +664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "OrdersController.cs",
-              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Orders\\OrdersController.cs",
-              "RelativeDocumentMoniker": "DoskochKursova\\Orders\\OrdersController.cs",
-              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Orders\\OrdersController.cs",
-              "RelativeToolTip": "DoskochKursova\\Orders\\OrdersController.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAAD4AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T21:29:53.005Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Orders\\OrderService.cs",
-              "RelativeDocumentMoniker": "DoskochKursova\\Orders\\OrderService.cs",
-              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Orders\\OrderService.cs",
-              "RelativeToolTip": "DoskochKursova\\Orders\\OrderService.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAswGwAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T21:24:17.646Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 32,
               "Title": "Storecontext.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Data\\Storecontext.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Data\\Storecontext.cs",
@@ -448,7 +676,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 33,
               "Title": "IOrderService.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Orders\\IOrderService.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Orders\\IOrderService.cs",
@@ -460,7 +688,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 34,
               "Title": "CreateOrderDto.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Orders\\CreateOrderDto.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Orders\\CreateOrderDto.cs",
@@ -472,31 +700,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "UserBook.cs",
-              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\UserBook.cs",
-              "RelativeDocumentMoniker": "DoskochKursova\\Books\\UserBook.cs",
-              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\UserBook.cs",
-              "RelativeToolTip": "DoskochKursova\\Books\\UserBook.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAYwCEAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T20:49:52.961Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "CreateBookDto.cs",
-              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\CreateBookDto.cs",
-              "RelativeDocumentMoniker": "DoskochKursova\\Books\\CreateBookDto.cs",
-              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\CreateBookDto.cs",
-              "RelativeToolTip": "DoskochKursova\\Books\\CreateBookDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T21:33:37.82Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 35,
               "Title": "StoreContextFactory.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Data\\StoreContextFactory.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Data\\StoreContextFactory.cs",
@@ -508,19 +712,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "SeedData.cs",
-              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Data\\SeedData.cs",
-              "RelativeDocumentMoniker": "DoskochKursova\\Data\\SeedData.cs",
-              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Data\\SeedData.cs",
-              "RelativeToolTip": "DoskochKursova\\Data\\SeedData.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAAAGYAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T12:52:17.246Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 36,
               "Title": "20251105191008_AddIdentityAndUserBooks.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Migrations\\20251105191008_AddIdentityAndUserBooks.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Migrations\\20251105191008_AddIdentityAndUserBooks.cs",
@@ -532,43 +724,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "20251009065704_InitialCreate.cs",
-              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Migrations\\20251009065704_InitialCreate.cs",
-              "RelativeDocumentMoniker": "DoskochKursova\\Migrations\\20251009065704_InitialCreate.cs",
-              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Migrations\\20251009065704_InitialCreate.cs",
-              "RelativeToolTip": "DoskochKursova\\Migrations\\20251009065704_InitialCreate.cs",
-              "ViewState": "AQIAAHwAAAAAAAAAAAAUwK0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T06:57:05.216Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "BookDetailsDto.cs",
-              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\BookDetailsDto.cs",
-              "RelativeDocumentMoniker": "DoskochKursova\\Books\\BookDetailsDto.cs",
-              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\BookDetailsDto.cs",
-              "RelativeToolTip": "DoskochKursova\\Books\\BookDetailsDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T23:15:26.76Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "BookListDto.cs",
-              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\BookListDto.cs",
-              "RelativeDocumentMoniker": "DoskochKursova\\Books\\BookListDto.cs",
-              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\BookListDto.cs",
-              "RelativeToolTip": "DoskochKursova\\Books\\BookListDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T21:33:59.155Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 37,
               "Title": "CategoriesController.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Books\\CategoriesController.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Books\\CategoriesController.cs",
@@ -580,7 +736,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 38,
               "Title": "ForgotPasswordDto.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\ForgotPasswordDto.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\ForgotPasswordDto.cs",
@@ -592,31 +748,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "EmailSender.cs",
-              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\EmailSender.cs",
-              "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\EmailSender.cs",
-              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\EmailSender.cs",
-              "RelativeToolTip": "DoskochKursova\\Accounting\\EmailSender.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAA6wCEAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T19:53:44.325Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\AccountController.cs",
-              "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\AccountController.cs",
-              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\AccountController.cs",
-              "RelativeToolTip": "DoskochKursova\\Accounting\\AccountController.cs",
-              "ViewState": "AQIAAIkAAAAAAAAAAAAAAJ8AAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T06:26:07.691Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 39,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\appsettings.Development.json",
               "RelativeDocumentMoniker": "DoskochKursova\\appsettings.Development.json",
@@ -628,7 +760,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 41,
               "Title": "ResetPasswordDto.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\ResetPasswordDto.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\ResetPasswordDto.cs",
@@ -640,7 +772,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 40,
               "Title": "IEmailSender.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\IEmailSender.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\IEmailSender.cs",
@@ -652,7 +784,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 42,
               "Title": "LoginDto.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\LoginDto.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\LoginDto.cs",
@@ -664,43 +796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "RegisterDto.cs",
-              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\RegisterDto.cs",
-              "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\RegisterDto.cs",
-              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\RegisterDto.cs",
-              "RelativeToolTip": "DoskochKursova\\Accounting\\RegisterDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T19:47:16.07Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\User.cs",
-              "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\User.cs",
-              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\User.cs",
-              "RelativeToolTip": "DoskochKursova\\Accounting\\User.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAkwBsAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T18:52:53.987Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Role.cs",
-              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\Role.cs",
-              "RelativeDocumentMoniker": "DoskochKursova\\Accounting\\Role.cs",
-              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Accounting\\Role.cs",
-              "RelativeToolTip": "DoskochKursova\\Accounting\\Role.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T18:55:03.55Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 49,
               "Title": "UserBook.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Models\\UserBook.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Models\\UserBook.cs",
@@ -712,19 +808,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "StoreContextModelSnapshot.cs",
-              "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Migrations\\StoreContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "DoskochKursova\\Migrations\\StoreContextModelSnapshot.cs",
-              "ToolTip": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Migrations\\StoreContextModelSnapshot.cs",
-              "RelativeToolTip": "DoskochKursova\\Migrations\\StoreContextModelSnapshot.cs",
-              "ViewState": "AQIAAKYBAAAAAAAAAAAmwCUCAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:19:09.317Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 44,
               "Title": "Category.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Models\\Category.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Models\\Category.cs",
@@ -736,7 +820,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 50,
               "Title": "Chapter.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Models\\Chapter.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Models\\Chapter.cs",
@@ -748,7 +832,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 48,
               "Title": "Book.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Models\\Book.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Models\\Book.cs",
@@ -760,7 +844,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 51,
               "Title": "AuthorsApiController.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Controllers\\AuthorsApiController.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Controllers\\AuthorsApiController.cs",
@@ -772,7 +856,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 52,
               "Title": "AuthorsController.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Controllers\\AuthorsController.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Controllers\\AuthorsController.cs",
@@ -784,7 +868,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 43,
               "Title": "Author.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Models\\Author.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Models\\Author.cs",
@@ -796,7 +880,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 45,
               "Title": "ScaffoldingReadMe.txt",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\ScaffoldingReadMe.txt",
               "RelativeDocumentMoniker": "DoskochKursova\\ScaffoldingReadMe.txt",
@@ -808,7 +892,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 53,
               "Title": "CategoriesController.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Controllers\\CategoriesController.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Controllers\\CategoriesController.cs",
@@ -820,7 +904,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 54,
               "Title": "DiscountsController.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Controllers\\DiscountsController.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Controllers\\DiscountsController.cs",
@@ -832,7 +916,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 46,
               "Title": "Discount.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Models\\Discount.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Models\\Discount.cs",
@@ -844,7 +928,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 47,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "DoskochKursova\\Models\\ErrorViewModel.cs",

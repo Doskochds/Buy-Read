@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v8.0": {
       "DoskochKursova/1.0.0": {
         "dependencies": {
+          "GTranslate": "2.3.1",
+          "HtmlAgilityPack": "1.11.61",
           "MailKit": "4.7.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.11",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.11",
@@ -63,6 +65,22 @@
           "lib/net6.0/BouncyCastle.Cryptography.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.4.0.33771"
+          }
+        }
+      },
+      "GTranslate/2.3.1": {
+        "runtime": {
+          "lib/net8.0/GTranslate.dll": {
+            "assemblyVersion": "2.3.1.0",
+            "fileVersion": "2.3.1.0"
+          }
+        }
+      },
+      "HtmlAgilityPack/1.11.61": {
+        "runtime": {
+          "lib/netstandard2.0/HtmlAgilityPack.dll": {
+            "assemblyVersion": "1.11.61.0",
+            "fileVersion": "1.11.61.0"
           }
         }
       },
@@ -2254,6 +2272,20 @@
       "sha512": "sha512-SwXsAV3sMvAU/Nn31pbjhWurYSjJ+/giI/0n6tCrYoupEK34iIHCuk3STAd9fx8yudM85KkLSVdn951vTng/vQ==",
       "path": "bouncycastle.cryptography/2.4.0",
       "hashPath": "bouncycastle.cryptography.2.4.0.nupkg.sha512"
+    },
+    "GTranslate/2.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bHT6UbYjVWCmhNyxt73NEyJtE1tDl9OMrIGIMypn3DPD7S7pjUVbS1TyZF6N8V2qtn9mSlaiu+6XbecIvjQZ8w==",
+      "path": "gtranslate/2.3.1",
+      "hashPath": "gtranslate.2.3.1.nupkg.sha512"
+    },
+    "HtmlAgilityPack/1.11.61": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hqZASeEFHS9quHvfZSwaULoAJLWkOYVPiQjc3P9J4pQS8vSYzrP3bxe04Vm7vYYuxwbQhq9hCSVvZVLTyRaNaQ==",
+      "path": "htmlagilitypack/1.11.61",
+      "hashPath": "htmlagilitypack.1.11.61.nupkg.sha512"
     },
     "Humanizer/2.14.1": {
       "type": "package",

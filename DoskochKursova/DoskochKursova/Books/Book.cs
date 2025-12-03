@@ -37,6 +37,8 @@ namespace DoskochKursova.Books
         [Display(Name = "File Name")]
         public string? FileName { get; set; }
 
+        public string? CoverImagePath { get; set; }
+
         public ICollection<Chapter>? Chapters { get; set; }
         public virtual ICollection<UserBook> UserBooks { get; set; }
     }

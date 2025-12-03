@@ -8,6 +8,8 @@
         public decimal Price { get; set; }
         public string AuthorName { get; set; }
         public string CategoryName { get; set; }
-        
+        public string? CoverImagePath { get; set; }
+
+
     }
 }

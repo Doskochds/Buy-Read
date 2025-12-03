@@ -6,6 +6,9 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import BookPage from './pages/BookPage';
 import ReadPage from './pages/ReadPage';
+import MyLibrary from './pages/MyLibrary';
+import CreateBook from './pages/Adminonly/CreateBook';
+import ConfirmEmail from './pages/ConfirmEmail';
 
 
 function App() {
@@ -18,9 +21,11 @@ function App() {
           <Route path="book/:id" element={<BookPage />} />
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
+          <Route path="library" element={<MyLibrary />} />
+          <Route path="admin/create" element={<CreateBook />} />
+          <Route path="/confirm-email" element={<ConfirmEmail />} />
         </Route>
         <Route path="/read/:chapterId" element={<ReadPage />} />
-        <Route path="/read-book/:bookId" element={<ReadPage mode="book" />} />
       </Routes>
     </BrowserRouter>
   );

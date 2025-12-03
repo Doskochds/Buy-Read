@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http;
 
 namespace DoskochKursova.Books
 {
@@ -16,5 +17,11 @@ namespace DoskochKursova.Books
         public decimal Price { get; set; }
 
         public string? Description { get; set; }
+
+        [Display(Name = "Обкладинка")]
+        public IFormFile? CoverImage { get; set; } 
+
+        [Display(Name = "Файл книги")]
+        public IFormFile? BookFile { get; set; }
     }
 }

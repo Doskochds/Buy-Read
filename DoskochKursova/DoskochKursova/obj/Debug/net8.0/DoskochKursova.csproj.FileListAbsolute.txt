@@ -301,3 +301,5 @@ D:\hnukursova\KursovaWB\KursovaWB\Buy-Read\DoskochKursova\DoskochKursova\bin\Deb
 D:\hnukursova\KursovaWB\KursovaWB\Buy-Read\DoskochKursova\DoskochKursova\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 D:\hnukursova\KursovaWB\KursovaWB\Buy-Read\DoskochKursova\DoskochKursova\bin\Debug\net8.0\MailKit.dll
 D:\hnukursova\KursovaWB\KursovaWB\Buy-Read\DoskochKursova\DoskochKursova\bin\Debug\net8.0\MimeKit.dll
+D:\hnukursova\KursovaWB\KursovaWB\Buy-Read\DoskochKursova\DoskochKursova\bin\Debug\net8.0\GTranslate.dll
+D:\hnukursova\KursovaWB\KursovaWB\Buy-Read\DoskochKursova\DoskochKursova\bin\Debug\net8.0\HtmlAgilityPack.dll

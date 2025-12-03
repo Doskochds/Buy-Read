@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NJbbiMj61pA1sY7zWXxuWDXgZHQpF7K/I9JkpI9+ddA=",
+  "Hash": "AoXFGzmi5SXlw7ngnOWBPWKuXXzYXC3NTwJomA3CNKs=",
   "Source": "DoskochKursova",
   "BasePath": "_content/DoskochKursova",
   "Mode": "Default",
@@ -2333,6 +2333,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\uploads\\covers\\97c64c71-5459-47e4-ba6a-3f8c00a588d9.png",
+      "SourceId": "DoskochKursova",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\",
+      "BasePath": "_content/DoskochKursova",
+      "RelativePath": "uploads/covers/97c64c71-5459-47e4-ba6a-3f8c00a588d9.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\covers\\97c64c71-5459-47e4-ba6a-3f8c00a588d9.png"
+    },
+    {
+      "Identity": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\uploads\\covers\\f12f335f-3620-43d2-8083-a6bbc36d294b.png",
+      "SourceId": "DoskochKursova",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\",
+      "BasePath": "_content/DoskochKursova",
+      "RelativePath": "uploads/covers/f12f335f-3620-43d2-8083-a6bbc36d294b.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\covers\\f12f335f-3620-43d2-8083-a6bbc36d294b.png"
     }
   ]
 }

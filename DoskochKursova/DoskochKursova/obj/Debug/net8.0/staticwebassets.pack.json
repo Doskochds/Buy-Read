@@ -245,6 +245,14 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\uploads\\covers\\97c64c71-5459-47e4-ba6a-3f8c00a588d9.png",
+      "PackagePath": "staticwebassets\\uploads\\covers\\97c64c71-5459-47e4-ba6a-3f8c00a588d9.png"
+    },
+    {
+      "Id": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\uploads\\covers\\f12f335f-3620-43d2-8083-a6bbc36d294b.png",
+      "PackagePath": "staticwebassets\\uploads\\covers\\f12f335f-3620-43d2-8083-a6bbc36d294b.png"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.DoskochKursova.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

@@ -15,6 +15,7 @@ namespace DoskochKursova.Orders
 
     public class OrderItemDto
     {
+        public int BookId { get; set; }
         public string BookTitle { get; set; } 
         public string AuthorName { get; set; } 
         public decimal Price { get; set; }    

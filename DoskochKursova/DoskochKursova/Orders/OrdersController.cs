@@ -20,12 +20,10 @@ namespace DoskochKursova.Orders
         [HttpPost("buy")]
         public async Task<IActionResult> BuyBooks([FromBody] CreateOrderDto dto)
         {
-            // 1. Дістаємо ID користувача з токена
             var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userIdString == null) return Unauthorized();
             var userId = int.Parse(userIdString);
 
-            // 2. Валідація
             if (dto.BookIds == null || !dto.BookIds.Any())
             {
                 return BadRequest("Кошик порожній.");
@@ -33,7 +31,6 @@ namespace DoskochKursova.Orders
 
             try
             {
-                // 3. Виклик сервісу
                 var order = await _orderService.CreateOrderAsync(userId, dto.BookIds);
 
                 return Ok(new
@@ -55,8 +52,6 @@ namespace DoskochKursova.Orders
             var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userIdString == null) return Unauthorized();
             var userId = int.Parse(userIdString);
-
-            // Сервіс вже повертає гарні DTO
             var orders = await _orderService.GetUserOrdersAsync(userId);
 
             return Ok(orders);

@@ -3,7 +3,9 @@ using DoskochKursova.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.AspNetCore.Http; // Для IFormFile
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace DoskochKursova.Books
 {
@@ -52,7 +54,7 @@ namespace DoskochKursova.Books
 
             var result = await _bookService.GetBookReadContentAsync(id, userId, isAdmin);
 
-            if (result == null) return Forbid(); 
+            if (result == null) return Forbid();
 
             if (result.Value.Type == "Empty")
                 return NotFound(new { Message = "Контент ще не додано." });
@@ -74,9 +76,8 @@ namespace DoskochKursova.Books
             return Ok(new { Message = $"Файл {file.FileName} успішно завантажено!" });
         }
 
-
         [HttpGet("{id}/download")]
-        [Authorize] 
+        [Authorize]
         public async Task<IActionResult> DownloadBookFile(int id)
         {
             var fileData = await _bookService.GetFileAsync(id);
@@ -85,15 +86,22 @@ namespace DoskochKursova.Books
             return File(fileData.Value.Content, "application/octet-stream", fileData.Value.FileName);
         }
 
+        // ОСЬ ТУТ: Метод створення став дуже простим
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        public async Task<ActionResult> Create([FromBody] CreateBookDto bookDto)
+        public async Task<ActionResult> Create([FromForm] CreateBookDto bookDto)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
+            // Вся магія з файлами відбувається всередині сервісу
             var book = await _bookService.CreateBookAsync(bookDto);
 
-            return Ok(new { Message = "Книгу створено", BookId = book.Id });
+            return Ok(new
+            {
+                Message = "Книгу створено",
+                BookId = book.Id,
+                CoverUrl = book.CoverImagePath // Повертаємо URL, щоб фронт відразу міг показати
+            });
         }
 
         [HttpPut("{id}")]
@@ -123,7 +131,7 @@ namespace DoskochKursova.Books
                 return NotFound();
             }
 
-            await _bookService.DeleteBookAsync(id); 
+            await _bookService.DeleteBookAsync(id);
             return NoContent();
         }
     }

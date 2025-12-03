@@ -12,6 +12,7 @@ using DoskochKursova.Orders;
 using DoskochKursova.Translation;
 using GTranslate;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -141,6 +142,7 @@ using (var scope = app.Services.CreateScope())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+app.UseStaticFiles();
 app.UseCors(MyAllowSpecificOrigins);
 app.UseAuthentication();
 app.UseAuthorization(); 

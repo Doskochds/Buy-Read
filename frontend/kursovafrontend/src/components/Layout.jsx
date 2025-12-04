@@ -1,20 +1,31 @@
 import { Outlet, Link, useNavigate } from 'react-router-dom';
+import { jwtDecode } from "jwt-decode"; 
 
 const Layout = () => {
     const navigate = useNavigate();
     
-    // Перевіряємо, чи ми залогінені
-    const isLoggedIn = !!localStorage.getItem('jwt-token');
+    const token = localStorage.getItem('jwt-token');
+    const isLoggedIn = !!token;
+
+    let isAdmin = false;
+    if (token) {
+        try {
+            const decoded = jwtDecode(token);
+            const role = decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"] || decoded.role;
+            isAdmin = role === 'Admin';
+        } catch (e) {
+            console.error("Невалідний токен", e);
+            isAdmin = false;
+        }
+    }
 
     const handleLogout = () => {
         localStorage.removeItem('jwt-token');
-        // Оновлюємо сторінку, щоб скинути стан
         window.location.href = '/login'; 
     };
 
     return (
         <div className="app-container">
-            {/* --- ШАПКА --- */}
             <header style={styles.header}>
                 <div className="logo">
                     <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
@@ -26,15 +37,17 @@ const Layout = () => {
                     <Link to="/" style={styles.link}>Головна</Link>
                     <Link to="/catalog" style={styles.link}>Каталог</Link>
 
-                    {/* Показуємо ці посилання тільки якщо залогінені */}
                     {isLoggedIn && (
                         <>
                             <Link to="/library" style={styles.link}>Мої книги</Link>
-                            <Link to="/admin/create" style={{...styles.link, color: '#ffc107'}}>+ Адмін</Link>
+
+                            {isAdmin && (
+                                <Link to="/admin/create" style={{...styles.link, color: '#ffc107'}}>+ Адмін</Link>
+                            )}
+                            {/* -------------------------------- */}
                         </>
                     )}
 
-                    {/* Кнопка Вхід або Вихід */}
                     {isLoggedIn ? (
                          <button onClick={handleLogout} style={styles.logoutBtn}>Вихід</button>
                     ) : (
@@ -43,12 +56,10 @@ const Layout = () => {
                 </nav>
             </header>
 
-            {/* --- КОНТЕНТ --- */}
             <main style={{ padding: '20px', minHeight: '80vh' }}>
                 <Outlet />
             </main>
 
-            {/* --- ПІДВАЛ --- */}
             <footer style={{ padding: '20px', background: '#f0f0f0', textAlign: 'center', color: '#666' }}>
                 <p>© 2025 Buy&Read. Курсова робота.</p>
             </footer>
@@ -56,7 +67,6 @@ const Layout = () => {
     );
 };
 
-// --- СТИЛІ ---
 const styles = {
     header: {
         padding: '0 40px',

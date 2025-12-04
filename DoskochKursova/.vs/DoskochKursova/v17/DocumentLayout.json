@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\books\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|d:\\hnukursova\\kursovawb\\kursovawb\\buy-read\\doskochkursova\\doskochkursova\\books\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\books\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|d:\\hnukursova\\kursovawb\\kursovawb\\buy-read\\doskochkursova\\doskochkursova\\books\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\doskochkursova\\books\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0076889E-5D1F-4F39-876D-CB237616CD1B}|DoskochKursova\\DoskochKursova.csproj|solutionrelative:doskochkursova\\books\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -254,8 +254,7 @@
               "RelativeToolTip": "DoskochKursova\\Books\\BookService.cs",
               "ViewState": "AQIAACkAAAAAAAAAAAAAAEcAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T21:35:25.179Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T21:35:25.179Z"
             },
             {
               "$type": "Document",
@@ -280,8 +279,7 @@
               "RelativeToolTip": "DoskochKursova\\Translation\\GoogleTranslationService.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAQwDcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T22:54:54.488Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T22:54:54.488Z"
             },
             {
               "$type": "Document",
@@ -293,8 +291,7 @@
               "RelativeToolTip": "DoskochKursova\\Books\\IBookService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T21:34:33.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T21:34:33.166Z"
             },
             {
               "$type": "Document",
@@ -306,8 +303,7 @@
               "RelativeToolTip": "DoskochKursova\\Books\\BookDetailsDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T23:15:26.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-19T23:15:26.76Z"
             },
             {
               "$type": "Document",
@@ -319,8 +315,7 @@
               "RelativeToolTip": "DoskochKursova\\Books\\Book.cs",
               "ViewState": "AQIAACAAAAAAAAAAAAAAACMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T21:37:46.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T21:37:46.435Z"
             },
             {
               "$type": "Document",
@@ -332,8 +327,7 @@
               "RelativeToolTip": "DoskochKursova\\Books\\ChaptersController.cs",
               "ViewState": "AQIAAIQAAAAAAAAAAAAiwKEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T22:11:14.012Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T22:11:14.012Z"
             },
             {
               "$type": "Document",
@@ -345,8 +339,7 @@
               "RelativeToolTip": "DoskochKursova\\Books\\Chapter.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T22:38:39.396Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T22:38:39.396Z"
             },
             {
               "$type": "Document",
@@ -358,8 +351,7 @@
               "RelativeToolTip": "DoskochKursova\\Books\\CreateBookDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T21:33:37.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T21:33:37.82Z"
             },
             {
               "$type": "Document",
@@ -371,8 +363,7 @@
               "RelativeToolTip": "DoskochKursova\\Books\\BookListDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T21:33:59.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T21:33:59.155Z"
             },
             {
               "$type": "Document",
@@ -384,8 +375,7 @@
               "RelativeToolTip": "DoskochKursova\\Program.cs",
               "ViewState": "AQIAAIcAAAAAAAAAAAAAAJAAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T06:39:01.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T06:39:01.51Z"
             },
             {
               "$type": "Document",
@@ -397,8 +387,7 @@
               "RelativeToolTip": "DoskochKursova\\Migrations\\20251203214350_1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T21:43:51.148Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T21:43:51.148Z"
             },
             {
               "$type": "Document",
@@ -410,8 +399,7 @@
               "RelativeToolTip": "DoskochKursova\\Accounting\\EmailSender.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAA6wCgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T19:53:44.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T19:53:44.325Z"
             },
             {
               "$type": "Document",
@@ -423,8 +411,7 @@
               "RelativeToolTip": "DoskochKursova\\Accounting\\RegisterDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T19:47:16.07Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T19:47:16.07Z"
             },
             {
               "$type": "Document",
@@ -436,8 +423,7 @@
               "RelativeToolTip": "DoskochKursova\\Accounting\\Role.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T18:55:03.55Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T18:55:03.55Z"
             },
             {
               "$type": "Document",
@@ -449,8 +435,7 @@
               "RelativeToolTip": "DoskochKursova\\Accounting\\User.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAkwBsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T18:52:53.987Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T18:52:53.987Z"
             },
             {
               "$type": "Document",
@@ -462,8 +447,7 @@
               "RelativeToolTip": "DoskochKursova\\Data\\SeedData.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAAABYAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T12:52:17.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-20T12:52:17.246Z"
             },
             {
               "$type": "Document",
@@ -475,8 +459,7 @@
               "RelativeToolTip": "DoskochKursova\\Accounting\\AccountController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T06:26:07.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-06T06:26:07.691Z"
             },
             {
               "$type": "Document",
@@ -488,8 +471,7 @@
               "RelativeToolTip": "DoskochKursova\\Migrations\\StoreContextModelSnapshot.cs",
               "ViewState": "AQIAAKkBAAAAAAAAAAAmwCgCAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:19:09.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:19:09.317Z"
             },
             {
               "$type": "Document",
@@ -501,8 +483,7 @@
               "RelativeToolTip": "DoskochKursova\\Migrations\\20251009065704_InitialCreate.cs",
               "ViewState": "AQIAAK0AAAAAAAAAAAAAAK0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T06:57:05.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T06:57:05.216Z"
             },
             {
               "$type": "Document",
@@ -514,8 +495,7 @@
               "RelativeToolTip": "DoskochKursova\\Orders\\OrdersController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T21:29:53.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T21:29:53.005Z"
             },
             {
               "$type": "Document",
@@ -527,8 +507,7 @@
               "RelativeToolTip": "DoskochKursova\\Orders\\OrderService.cs",
               "ViewState": "AQIAAEgAAAAAAAAAAAAAAFoAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T21:24:17.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T21:24:17.646Z"
             },
             {
               "$type": "Document",
@@ -540,8 +519,7 @@
               "RelativeToolTip": "DoskochKursova\\Orders\\OrderDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T20:45:34.864Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T20:45:34.864Z"
             },
             {
               "$type": "Document",
@@ -553,8 +531,7 @@
               "RelativeToolTip": "DoskochKursova\\Translation\\ITranslationService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T22:58:05.151Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T22:58:05.151Z"
             },
             {
               "$type": "Document",
@@ -566,8 +543,7 @@
               "RelativeToolTip": "DoskochKursova\\Orders\\Orders.cs",
               "ViewState": "AQIAAB8AAAAAAAAAAAAAADYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T21:25:51.363Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T21:25:51.363Z"
             },
             {
               "$type": "Document",
@@ -579,8 +555,7 @@
               "RelativeToolTip": "DoskochKursova\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-09T06:28:09.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T06:28:09.889Z"
             },
             {
               "$type": "Document",
@@ -592,8 +567,7 @@
               "RelativeToolTip": "DoskochKursova\\Accounting\\CommentService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T21:54:42.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T21:54:42.138Z"
             },
             {
               "$type": "Document",
@@ -605,8 +579,7 @@
               "RelativeToolTip": "DoskochKursova\\Migrations\\20251130220301_AddComments.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T22:03:02.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T22:03:02.162Z"
             },
             {
               "$type": "Document",
@@ -618,8 +591,7 @@
               "RelativeToolTip": "DoskochKursova\\Migrations\\20251130220341_AddComments.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T22:03:41.761Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T22:03:41.761Z"
             },
             {
               "$type": "Document",
@@ -631,8 +603,7 @@
               "RelativeToolTip": "DoskochKursova\\Accounting\\CommentsController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T21:45:44.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T21:45:44.307Z"
             },
             {
               "$type": "Document",
@@ -644,8 +615,7 @@
               "RelativeToolTip": "DoskochKursova\\Accounting\\CommentDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T21:43:57.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T21:43:57.522Z"
             },
             {
               "$type": "Document",
@@ -657,8 +627,7 @@
               "RelativeToolTip": "DoskochKursova\\Accounting\\Comment.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T21:42:11.48Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T21:42:11.48Z"
             },
             {
               "$type": "Document",
@@ -670,8 +639,7 @@
               "RelativeToolTip": "DoskochKursova\\Accounting\\ICommentService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T21:53:25.652Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T21:53:25.652Z"
             },
             {
               "$type": "Document",
@@ -683,8 +651,7 @@
               "RelativeToolTip": "DoskochKursova\\Data\\Storecontext.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAswBgAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T06:25:35.081Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T06:25:35.081Z"
             },
             {
               "$type": "Document",
@@ -696,8 +663,7 @@
               "RelativeToolTip": "DoskochKursova\\Orders\\IOrderService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T21:23:11.432Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T21:23:11.432Z"
             },
             {
               "$type": "Document",
@@ -709,8 +675,7 @@
               "RelativeToolTip": "DoskochKursova\\Orders\\CreateOrderDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T21:21:56.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T21:21:56.253Z"
             },
             {
               "$type": "Document",
@@ -722,8 +687,7 @@
               "RelativeToolTip": "DoskochKursova\\Data\\StoreContextFactory.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T06:54:57.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T06:54:57.331Z"
             },
             {
               "$type": "Document",
@@ -735,8 +699,7 @@
               "RelativeToolTip": "DoskochKursova\\Migrations\\20251105191008_AddIdentityAndUserBooks.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T12:53:14.639Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-20T12:53:14.639Z"
             },
             {
               "$type": "Document",
@@ -748,8 +711,7 @@
               "RelativeToolTip": "DoskochKursova\\Books\\CategoriesController.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAADwvxwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T22:22:06.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-19T22:22:06.514Z"
             },
             {
               "$type": "Document",
@@ -761,8 +723,7 @@
               "RelativeToolTip": "DoskochKursova\\Accounting\\ForgotPasswordDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T19:50:06.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T19:50:06.268Z"
             },
             {
               "$type": "Document",
@@ -774,8 +735,7 @@
               "RelativeToolTip": "DoskochKursova\\appsettings.Development.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-06T06:23:57.606Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-06T06:23:57.606Z"
             },
             {
               "$type": "Document",
@@ -787,8 +747,7 @@
               "RelativeToolTip": "DoskochKursova\\Accounting\\ResetPasswordDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T19:50:44.992Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T19:50:44.992Z"
             },
             {
               "$type": "Document",
@@ -800,8 +759,7 @@
               "RelativeToolTip": "DoskochKursova\\Accounting\\IEmailSender.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T19:52:52.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T19:52:52.874Z"
             },
             {
               "$type": "Document",
@@ -813,8 +771,7 @@
               "RelativeToolTip": "DoskochKursova\\Accounting\\LoginDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T19:48:59.807Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T19:48:59.807Z"
             },
             {
               "$type": "Document",
@@ -826,8 +783,7 @@
               "RelativeToolTip": "DoskochKursova\\Models\\UserBook.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T22:09:11.548Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T22:09:11.548Z"
             },
             {
               "$type": "Document",
@@ -839,8 +795,7 @@
               "RelativeToolTip": "DoskochKursova\\Models\\Category.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T06:21:22.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T06:21:22.47Z"
             },
             {
               "$type": "Document",
@@ -852,8 +807,7 @@
               "RelativeToolTip": "DoskochKursova\\Models\\Chapter.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T06:22:14.912Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T06:22:14.912Z"
             },
             {
               "$type": "Document",
@@ -865,8 +819,7 @@
               "RelativeToolTip": "DoskochKursova\\Models\\Book.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T06:18:37.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T06:18:37.202Z"
             },
             {
               "$type": "Document",
@@ -878,8 +831,7 @@
               "RelativeToolTip": "DoskochKursova\\Controllers\\AuthorsApiController.cs",
               "ViewState": "AQIAAFIAAAAAAAAAAAAkwFYAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T06:10:10.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T06:10:10.96Z"
             },
             {
               "$type": "Document",
@@ -891,8 +843,7 @@
               "RelativeToolTip": "DoskochKursova\\Controllers\\AuthorsController.cs",
               "ViewState": "AQIAAH8AAAAAAAAAAAAqwJ0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T07:16:16.904Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T07:16:16.904Z"
             },
             {
               "$type": "Document",
@@ -904,8 +855,7 @@
               "RelativeToolTip": "DoskochKursova\\Models\\Author.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T06:20:20.567Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T06:20:20.567Z"
             },
             {
               "$type": "Document",
@@ -917,8 +867,7 @@
               "RelativeToolTip": "DoskochKursova\\ScaffoldingReadMe.txt",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-10-22T22:57:52.892Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T22:57:52.892Z"
             },
             {
               "$type": "Document",
@@ -930,8 +879,7 @@
               "RelativeToolTip": "DoskochKursova\\Controllers\\CategoriesController.cs",
               "ViewState": "AQIAAJUAAAAAAAAAAAAAAJ0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T09:44:08.605Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T09:44:08.605Z"
             },
             {
               "$type": "Document",
@@ -943,8 +891,7 @@
               "RelativeToolTip": "DoskochKursova\\Controllers\\DiscountsController.cs",
               "ViewState": "AQIAAIYAAAAAAAAAAAAswKQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T12:07:04.661Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T12:07:04.661Z"
             },
             {
               "$type": "Document",
@@ -956,8 +903,7 @@
               "RelativeToolTip": "DoskochKursova\\Models\\Discount.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAwwBMAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T06:22:52.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T06:22:52.887Z"
             },
             {
               "$type": "Document",
@@ -969,8 +915,7 @@
               "RelativeToolTip": "DoskochKursova\\Models\\ErrorViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T13:26:16.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T13:26:16.053Z"
             }
           ]
         }

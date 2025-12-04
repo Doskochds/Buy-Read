@@ -45,14 +45,14 @@ namespace DoskochKursova.Books
 
         [HttpGet("{id}/read")]
         [Authorize]
-        public async Task<IActionResult> GetBookContent(int id)
+        public async Task<IActionResult> GetBookContent(int id, [FromQuery] string? lang = "uk")
         {
             var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userIdString == null) return Unauthorized();
             var userId = int.Parse(userIdString);
             bool isAdmin = User.IsInRole("Admin");
 
-            var result = await _bookService.GetBookReadContentAsync(id, userId, isAdmin);
+            var result = await _bookService.GetBookReadContentAsync(id, userId, isAdmin, lang);
 
             if (result == null) return Forbid();
 

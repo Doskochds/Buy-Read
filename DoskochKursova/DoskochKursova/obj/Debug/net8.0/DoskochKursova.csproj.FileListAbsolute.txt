@@ -303,3 +303,11 @@ D:\hnukursova\KursovaWB\KursovaWB\Buy-Read\DoskochKursova\DoskochKursova\bin\Deb
 D:\hnukursova\KursovaWB\KursovaWB\Buy-Read\DoskochKursova\DoskochKursova\bin\Debug\net8.0\MimeKit.dll
 D:\hnukursova\KursovaWB\KursovaWB\Buy-Read\DoskochKursova\DoskochKursova\bin\Debug\net8.0\GTranslate.dll
 D:\hnukursova\KursovaWB\KursovaWB\Buy-Read\DoskochKursova\DoskochKursova\bin\Debug\net8.0\HtmlAgilityPack.dll
+D:\hnukursova\KursovaWB\KursovaWB\Buy-Read\DoskochKursova\DoskochKursova\bin\Debug\net8.0\UglyToad.PdfPig.Core.dll
+D:\hnukursova\KursovaWB\KursovaWB\Buy-Read\DoskochKursova\DoskochKursova\bin\Debug\net8.0\UglyToad.PdfPig.DocumentLayoutAnalysis.dll
+D:\hnukursova\KursovaWB\KursovaWB\Buy-Read\DoskochKursova\DoskochKursova\bin\Debug\net8.0\UglyToad.PdfPig.Fonts.dll
+D:\hnukursova\KursovaWB\KursovaWB\Buy-Read\DoskochKursova\DoskochKursova\bin\Debug\net8.0\UglyToad.PdfPig.Package.dll
+D:\hnukursova\KursovaWB\KursovaWB\Buy-Read\DoskochKursova\DoskochKursova\bin\Debug\net8.0\UglyToad.PdfPig.Tokenization.dll
+D:\hnukursova\KursovaWB\KursovaWB\Buy-Read\DoskochKursova\DoskochKursova\bin\Debug\net8.0\UglyToad.PdfPig.Tokens.dll
+D:\hnukursova\KursovaWB\KursovaWB\Buy-Read\DoskochKursova\DoskochKursova\bin\Debug\net8.0\UglyToad.PdfPig.dll
+D:\hnukursova\KursovaWB\KursovaWB\Buy-Read\DoskochKursova\DoskochKursova\bin\Debug\net8.0\VersOne.Epub.dll

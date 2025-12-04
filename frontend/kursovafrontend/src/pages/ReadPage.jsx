@@ -8,50 +8,53 @@ const ReadPage = () => {
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
     
-    // type=file означає, що chapterId - це насправді bookId
-    const readType = searchParams.get('type'); 
+    const readType = searchParams.get('type');
 
     const [content, setContent] = useState("");
     const [title, setTitle] = useState("");
     
-    // URL для PDF (тепер це буде blob:http://...)
-    const [pdfUrl, setPdfUrl] = useState(null);
+    const [contentType, setContentType] = useState("html"); 
     
+    const [pdfUrl, setPdfUrl] = useState(null);
     const [loading, setLoading] = useState(true);
     const [isTranslating, setIsTranslating] = useState(false);
     const [currentLang, setCurrentLang] = useState("uk");
 
     useEffect(() => {
         if (!chapterId) return;
-
-        // Очистка blob-посилання при виході (щоб не забивати пам'ять)
         return () => {
             if (pdfUrl) window.URL.revokeObjectURL(pdfUrl);
         };
-    }, [pdfUrl]); // Залежність тільки від зміни URL
+    }, [pdfUrl, chapterId]);
 
     useEffect(() => {
         const loadContent = async () => {
             setLoading(true);
             try {
                 if (readType === 'file') {
-                    // --- ВАРІАНТ 1: ЗАВАНТАЖЕННЯ PDF З ТОКЕНОМ ---
-                    setTitle("Перегляд книги");
-                    
-                    // Важливо: responseType: 'blob'
-                    const response = await api.get(`/Books/${chapterId}/download`, {
-                        responseType: 'blob' 
-                    });
+                    const response = await api.get(`/Books/${chapterId}/read`);
+                    const { bookType, data } = response.data;
 
-                    // Створюємо локальне посилання на завантажений файл
-                    const file = new Blob([response.data], { type: 'application/pdf' });
-                    const fileURL = URL.createObjectURL(file);
-                    
-                    setPdfUrl(fileURL);
+                    if (bookType === 'RawText') {
+                        setTitle("Читання книги");
+                        setContent(data); 
+                        setContentType("text");
+                    } 
+                    else {
+                        const fileResponse = await api.get(`/Books/${chapterId}/download`, {
+                            responseType: 'blob'
+                        });
+                        const file = new Blob([fileResponse.data], { type: 'application/pdf' });
+                        const fileURL = URL.createObjectURL(file);
+                        
+                        setPdfUrl(fileURL);
+                        setContentType("pdf");
+                        setTitle("Перегляд файлу");
+                    }
                 } 
                 else {
-                    // --- ВАРІАНТ 2: ЗАВАНТАЖЕННЯ ТЕКСТУ ГЛАВИ ---
                     await loadTextChapter();
+                    setContentType("html");
                 }
             } catch (error) {
                 console.error("Помилка:", error);
@@ -63,7 +66,7 @@ const ReadPage = () => {
         };
 
         loadContent();
-    }, [chapterId, readType, navigate]); // Прибрав pdfUrl з залежностей, щоб не було циклу
+    }, [chapterId, readType, navigate]);
 
     const loadTextChapter = async () => {
         const res = await api.get(`/Chapters/${chapterId}`);
@@ -73,23 +76,34 @@ const ReadPage = () => {
     };
 
     const handleTranslate = async (lang) => {
-        if (readType === 'file') return;
+        if (contentType === 'pdf') return; 
 
-        if (lang === "uk") {
-            setLoading(true);
-            await loadTextChapter();
-            setLoading(false);
-            return;
-        }
-        
+        setLoading(true);
         setIsTranslating(true);
+
         try {
-            const res = await api.get(`/Chapters/${chapterId}/translate?lang=${lang}`);
-            setContent(res.data.translatedContent);
+            if (lang === "uk") {
+                if (readType === 'file') {
+                     const response = await api.get(`/Books/${chapterId}/read`);
+                     setContent(response.data.data);
+                } else {
+                     await loadTextChapter();
+                }
+            } else {
+                if (readType === 'file') {
+                    const response = await api.get(`/Books/${chapterId}/read?lang=${lang}`);
+                    setContent(response.data.data);
+                } else {
+                    const res = await api.get(`/Chapters/${chapterId}/translate?lang=${lang}`);
+                    setContent(res.data.translatedContent);
+                }
+            }
             setCurrentLang(lang);
         } catch (err) {
-            alert("Помилка перекладу");
+            console.error("Помилка перекладу:", err);
+            alert("Помилка при перекладі.");
         } finally {
+            setLoading(false);
             setIsTranslating(false);
         }
     };
@@ -99,7 +113,7 @@ const ReadPage = () => {
             <div style={styles.toolbar}>
                 <button onClick={() => navigate(-1)} style={styles.closeBtn}>← Назад</button>
                 
-                {readType !== 'file' && (
+                {contentType !== 'pdf' && (
                     <div style={styles.langSwitcher}>
                         <button style={currentLang === 'uk' ? styles.langBtnActive : styles.langBtn} onClick={() => handleTranslate('uk')} disabled={isTranslating}>🇺🇦</button>
                         <button style={currentLang === 'en' ? styles.langBtnActive : styles.langBtn} onClick={() => handleTranslate('en')} disabled={isTranslating}>🇬🇧</button>
@@ -109,31 +123,21 @@ const ReadPage = () => {
             </div>
 
             {loading ? (
-                 <div style={{textAlign: 'center', marginTop: '50px', fontSize: '1.2em'}}>⏳ Завантаження контенту...</div>
+                 <div style={{textAlign: 'center', marginTop: '50px', fontSize: '1.2em'}}>⏳ Обробка книги...</div>
             ) : (
                 <>
                     <h1 style={styles.chapterTitle}>{title}</h1>
 
-                    {readType === 'file' ? (
+                    {contentType === 'pdf' ? (
                         <div style={{height: '85vh', border: '1px solid #ddd', borderRadius: '8px', overflow: 'hidden'}}>
-                            {/* Відображаємо Blob URL */}
-                            {pdfUrl && (
-                                <embed 
-                                    src={pdfUrl} 
-                                    type="application/pdf" 
-                                    width="100%" 
-                                    height="100%" 
-                                />
-                            )}
+                            {pdfUrl && <embed src={pdfUrl} type="application/pdf" width="100%" height="100%" />}
                         </div>
                     ) : (
                         isTranslating ? (
-                            <div style={styles.skeletonWrapper}>
-                                <p style={{textAlign: 'center', color: '#888'}}>🤖 Переклад...</p>
-                            </div>
+                            <div style={styles.skeletonWrapper}><p style={{textAlign: 'center', color: '#888'}}>🤖 Переклад...</p></div>
                         ) : (
                             <div 
-                                style={styles.content}
+                                style={styles.htmlContent}
                                 dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content) }} 
                             />
                         )
@@ -156,7 +160,16 @@ const styles = {
     langBtn: { padding: '6px 10px', cursor: 'pointer', border: '1px solid transparent', backgroundColor: '#f5f5f5', borderRadius: '6px', fontSize: '14px' },
     langBtnActive: { padding: '6px 10px', cursor: 'pointer', border: '1px solid #007bff', backgroundColor: '#e7f1ff', borderRadius: '6px', color: '#007bff', fontWeight: 'bold', fontSize: '14px' },
     chapterTitle: { textAlign: 'center', fontSize: '32px', marginBottom: '30px', marginTop: '10px', fontFamily: "'Merriweather', serif", color: '#222' },
-    content: { fontSize: '20px', lineHeight: '1.8', color: '#333', fontFamily: "'Merriweather', 'Georgia', serif", textAlign: 'justify' },
+    
+    htmlContent: { 
+        fontSize: '20px', 
+        lineHeight: '1.8', 
+        color: '#333', 
+        fontFamily: "'Merriweather', 'Georgia', serif", 
+        textAlign: 'justify',
+        paddingBottom: '50px'
+    },
+    
     skeletonWrapper: { padding: '50px 0', textAlign: 'center' },
     bigCloseBtn: { padding: '12px 30px', backgroundColor: '#333', color: 'white', border: 'none', borderRadius: '30px', fontSize: '16px', cursor: 'pointer', fontWeight: 'bold' },
 };

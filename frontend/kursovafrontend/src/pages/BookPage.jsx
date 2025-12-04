@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import api from '../api/axios';
 
-// Твій базовий URL (можеш використовувати його для картинок)
 const API_BASE_URL = "https://localhost:7025"; 
 
 const BookPage = () => {
@@ -21,25 +20,40 @@ const BookPage = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
+                // 1. Спочатку вантажимо саму книгу
                 const bookResponse = await api.get(`/Books/${id}`);
                 setBook(bookResponse.data);
 
-                try {
-                    const chaptersResponse = await api.get(`/Chapters/book/${id}`);
-                    setChapters(chaptersResponse.data);
-                } catch (err) {
-                    setChapters([]); // Це нормально для файлових книг
-                }
-
+                // 2. Отримуємо інформацію про доступ (Тут ми дізнаємось тип книги: File, RawText чи Episodic)
+                let currentAccessInfo = null;
                 if (isLoggedIn) {
                     try {
                         const readResponse = await api.get(`/Books/${id}/read`);
-                        setAccessInfo(readResponse.data); 
+                        currentAccessInfo = readResponse.data;
+                        setAccessInfo(currentAccessInfo); 
                         setHasAccess(true);
                     } catch (err) {
                         setHasAccess(false);
                     }
                 }
+
+                // 3. Вантажимо глави ТІЛЬКИ якщо ми не знаємо напевно, що це файл
+                // Якщо бекенд вже сказав, що це File або RawText, немає сенсу довбати сервер запитом про глави
+                const isFileBook = currentAccessInfo && (currentAccessInfo.bookType === 'File' || currentAccessInfo.bookType === 'RawText');
+
+                if (!isFileBook) {
+                    try {
+                        const chaptersResponse = await api.get(`/Chapters/book/${id}`);
+                        setChapters(chaptersResponse.data);
+                    } catch (err) {
+                        // Якщо глав немає (404), просто ставимо пустий масив і не переживаємо
+                        setChapters([]); 
+                    }
+                } else {
+                    // Якщо це файл, глав точно немає
+                    setChapters([]);
+                }
+
             } catch (error) {
                 console.error("Помилка завантаження:", error);
             } finally {
@@ -55,7 +69,7 @@ const BookPage = () => {
             try {
                 await api.post('/Orders/buy', { bookIds: [book.id] });
                 alert("Покупка успішна!");
-                window.location.reload(); // Найпростіший спосіб оновити всі стани
+                window.location.reload(); 
             } catch (err) {
                 alert("Помилка покупки: " + (err.response?.data?.message || err.message));
             }
@@ -65,30 +79,33 @@ const BookPage = () => {
     const handleRead = () => {
         if (!accessInfo) return;
 
-        if (accessInfo.bookType === 'File') {
-            // Переходимо на універсальну читалку в режимі файлу
+        // === ВИПРАВЛЕННЯ ТУТ ===
+        // Додаємо перевірку на 'RawText'. Тепер ми знаємо, що це теж файлова книга.
+        if (accessInfo.bookType === 'File' || accessInfo.bookType === 'RawText') {
             navigate(`/read/${id}?type=file`);
         } 
         else {
+            // Логіка для книг з главами
             if (chapters.length > 0) {
                 navigate(`/read/${chapters[0].id}`);
             } else {
-                alert("Текст книги ще готується.");
+                alert("Текст книги ще готується (глави відсутні).");
             }
         }
     };
 
     const handleDownload = async () => {
         try {
-            // Завантажуємо файл з токеном
             const response = await api.get(`/Books/${id}/download`, { responseType: 'blob' });
             
-            // Створюємо посилання для скачування
+            // Визначаємо розширення (спробуємо вгадати або дефолт)
+            let extension = "pdf";
+            if (response.data.type === "text/plain") extension = "txt";
+
             const url = window.URL.createObjectURL(new Blob([response.data]));
             const link = document.createElement('a');
             link.href = url;
-            // Спробуємо дістати ім'я файлу з заголовків або дати дефолтне
-            link.setAttribute('download', book.title + ".pdf"); 
+            link.setAttribute('download', `${book.title}.${extension}`); 
             document.body.appendChild(link);
             link.click();
             link.parentNode.removeChild(link);
@@ -102,6 +119,9 @@ const BookPage = () => {
         if (path.startsWith('http')) return path;
         return `${API_BASE_URL}${path}`;
     };
+
+    // Допоміжна функція, щоб перевірити, чи це книга-файл
+    const isFileFormat = accessInfo?.bookType === 'File' || accessInfo?.bookType === 'RawText';
 
     if (loading) return <div style={{textAlign: 'center', marginTop: '50px'}}>Завантаження...</div>;
     if (!book) return <div style={{textAlign: 'center', marginTop: '50px'}}>Книгу не знайдено</div>;
@@ -134,13 +154,16 @@ const BookPage = () => {
                     ) : (
                         <div style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
                             <button style={styles.readButton} onClick={handleRead}>📖 Читати</button>
-                            {accessInfo?.bookType === 'File' && (
+                            {/* Показуємо кнопку скачування для будь-якого файлового типу */}
+                            {isFileFormat && (
                                 <button style={styles.downloadButton} onClick={handleDownload}>⬇️ Завантажити файл</button>
                             )}
                         </div>
                     )}
-                    {hasAccess && accessInfo?.bookType === 'File' && (
-                         <small style={{textAlign: 'center', color: '#666', fontSize: '12px'}}>Формат: Цілий файл</small>
+                    {hasAccess && isFileFormat && (
+                         <small style={{textAlign: 'center', color: '#666', fontSize: '12px'}}>
+                             Формат: Цілий файл {accessInfo.bookType === 'RawText' ? '(Текст)' : '(PDF)'}
+                         </small>
                     )}
                 </div>
             </div>
@@ -162,7 +185,7 @@ const BookPage = () => {
                             <div style={styles.infoItem}>
                                 <span style={styles.label}>Тип:</span>
                                 <span style={styles.infoValue}>
-                                    {accessInfo?.bookType === 'File' ? "Цілий твір (Файл)" : "Розділений твір (Глави)"}
+                                    {isFileFormat ? "Цілий твір (Файл)" : "Розділений твір (Глави)"}
                                 </span>
                             </div>
                         </div>
@@ -171,10 +194,12 @@ const BookPage = () => {
 
                 {activeTab === 'chapters' && (
                     <div style={styles.tabContent}>
-                         {accessInfo?.bookType === 'File' ? (
+                         {/* Тут теж перевіряємо на обидва типи */}
+                         {isFileFormat ? (
                              <div style={{padding: '20px', backgroundColor: '#f9f9f9', borderRadius: '8px', textAlign: 'center'}}>
                                  <p>📢 Ця книга доступна як цілісний файл.</p>
                                  <p>Ви можете читати її онлайн або завантажити.</p>
+                                 <button style={{...styles.smallReadBtn, marginTop: '10px'}} onClick={handleRead}>Читати книгу</button>
                              </div>
                          ) : (
                             <div style={styles.chapterList}>
@@ -185,18 +210,19 @@ const BookPage = () => {
                                             <button style={styles.smallReadBtn} onClick={() => navigate(`/read/${chapter.id}`)}>Читати</button>
                                         ) : (<span style={{fontSize: '0.8em', color: '#999'}}>🔒</span>)}
                                     </div>
-                                )) : <p style={{color: '#777'}}>Зміст поки порожній.</p>}
+                                )) : <p style={{color: '#777'}}>Зміст поки порожній або недоступний.</p>}
                             </div>
                          )}
                     </div>
                 )}
-                {/* Коментарі без змін */}
-                 {activeTab === 'comments' && <div style={styles.tabContent}><p style={{color: '#777'}}>Коментарі...</p></div>}
+
+                {activeTab === 'comments' && <div style={styles.tabContent}><p style={{color: '#777'}}>Коментарі...</p></div>}
             </div>
         </div>
     );
 };
 
+// ... styles залишаються без змін ...
 const styles = {
     container: { display: 'flex', maxWidth: '1100px', margin: '0 auto', padding: '40px 20px', gap: '50px', alignItems: 'flex-start', flexWrap: 'wrap' },
     sidebar: { width: '300px', flexShrink: 0, display: 'flex', flexDirection: 'column', gap: '20px' },

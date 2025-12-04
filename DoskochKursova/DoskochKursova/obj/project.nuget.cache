@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ywCfUHQs7uOHKGbd6Rfr14lEiADC4QsIUZRbHjxDCaOKEWIZFNWkCtoyuHcpJQEp9G4XId9gRYf29C3smb6QMA==",
+  "dgSpecHash": "5nF1XEF0pkPmHhqd56UqTX0t+NuvyWb5S65rC5glJeIYshewxhVELzdSSbOiXhy90D0Z/7t+L7CEZxgg/K/VUA==",
   "success": true,
   "projectFilePath": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\DoskochKursova.csproj",
   "expectedPackageFiles": [
@@ -140,6 +140,7 @@
     "C:\\Users\\Dell i7\\.nuget\\packages\\nuget.projectmodel\\6.11.0\\nuget.projectmodel.6.11.0.nupkg.sha512",
     "C:\\Users\\Dell i7\\.nuget\\packages\\nuget.protocol\\6.11.0\\nuget.protocol.6.11.0.nupkg.sha512",
     "C:\\Users\\Dell i7\\.nuget\\packages\\nuget.versioning\\6.11.0\\nuget.versioning.6.11.0.nupkg.sha512",
+    "C:\\Users\\Dell i7\\.nuget\\packages\\pdfpig\\0.1.12\\pdfpig.0.1.12.nupkg.sha512",
     "C:\\Users\\Dell i7\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\9.0.0\\pomelo.entityframeworkcore.mysql.9.0.0.nupkg.sha512",
     "C:\\Users\\Dell i7\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "C:\\Users\\Dell i7\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
@@ -180,7 +181,8 @@
     "C:\\Users\\Dell i7\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
     "C:\\Users\\Dell i7\\.nuget\\packages\\system.threading.tasks.dataflow\\7.0.0\\system.threading.tasks.dataflow.7.0.0.nupkg.sha512",
     "C:\\Users\\Dell i7\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\Dell i7\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
+    "C:\\Users\\Dell i7\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Dell i7\\.nuget\\packages\\versone.epub\\3.3.4\\versone.epub.3.3.4.nupkg.sha512"
   ],
   "logs": []
 }

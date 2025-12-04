@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AoXFGzmi5SXlw7ngnOWBPWKuXXzYXC3NTwJomA3CNKs=",
+  "Hash": "1h8qP4mfz8GgVz4n4A6DlxoYIrzD20JNISoYtTdZ2Zk=",
   "Source": "DoskochKursova",
   "BasePath": "_content/DoskochKursova",
   "Mode": "Default",
@@ -2354,6 +2354,44 @@
       "OriginalItemSpec": "wwwroot\\uploads\\covers\\97c64c71-5459-47e4-ba6a-3f8c00a588d9.png"
     },
     {
+      "Identity": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\uploads\\covers\\b8bed4c6-5a45-4ac6-832c-87d62615a00a.jpg",
+      "SourceId": "DoskochKursova",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\",
+      "BasePath": "_content/DoskochKursova",
+      "RelativePath": "uploads/covers/b8bed4c6-5a45-4ac6-832c-87d62615a00a.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\covers\\b8bed4c6-5a45-4ac6-832c-87d62615a00a.jpg"
+    },
+    {
+      "Identity": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\uploads\\covers\\e89eae80-96a1-49c8-affa-4da793003a33.png",
+      "SourceId": "DoskochKursova",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\",
+      "BasePath": "_content/DoskochKursova",
+      "RelativePath": "uploads/covers/e89eae80-96a1-49c8-affa-4da793003a33.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\covers\\e89eae80-96a1-49c8-affa-4da793003a33.png"
+    },
+    {
       "Identity": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\uploads\\covers\\f12f335f-3620-43d2-8083-a6bbc36d294b.png",
       "SourceId": "DoskochKursova",
       "SourceType": "Discovered",
@@ -2371,6 +2409,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\covers\\f12f335f-3620-43d2-8083-a6bbc36d294b.png"
+    },
+    {
+      "Identity": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\uploads\\covers\\f47549bf-920f-434b-b485-5fbcd3caac0c.png",
+      "SourceId": "DoskochKursova",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\",
+      "BasePath": "_content/DoskochKursova",
+      "RelativePath": "uploads/covers/f47549bf-920f-434b-b485-5fbcd3caac0c.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\covers\\f47549bf-920f-434b-b485-5fbcd3caac0c.png"
     }
   ]
 }

@@ -1,13 +1,15 @@
 ﻿using GTranslate.Translators;
 using HtmlAgilityPack;
 using System.Text;
-using DoskochKursova.Translation;
+using System.Net;
 
 namespace DoskochKursova.Translation
 {
     public class GoogleTranslationService : ITranslationService
     {
         private readonly GoogleTranslator _translator;
+        private const int MAX_CHUNK_SIZE = 3500;
+        private const string SEPARATOR = " [||] ";
 
         public GoogleTranslationService()
         {
@@ -23,33 +25,70 @@ namespace DoskochKursova.Translation
             {
                 var doc = new HtmlDocument();
                 doc.LoadHtml(htmlContent);
-                var textNodes = doc.DocumentNode.SelectNodes("//text()[normalize-space(.) != '']");
 
-                if (textNodes != null)
+                var textNodes = doc.DocumentNode.SelectNodes("//text()[normalize-space(.) != '']")
+                                ?.Where(n => WebUtility.HtmlDecode(n.InnerText).Trim().Length > 1)
+                                .ToList();
+
+                if (textNodes == null || !textNodes.Any())
+                    return htmlContent;
+
+                var chunks = new List<List<HtmlNode>>();
+                var currentChunk = new List<HtmlNode>();
+                int currentLength = 0;
+
+                foreach (var node in textNodes)
                 {
-                    foreach (var node in textNodes)
+                    int nodeLength = node.InnerText.Length;
+
+                    if (currentLength + nodeLength + SEPARATOR.Length > MAX_CHUNK_SIZE)
                     {
-                        string originalText = System.Net.WebUtility.HtmlDecode(node.InnerText).Trim();
+                        chunks.Add(currentChunk);
+                        currentChunk = new List<HtmlNode>();
+                        currentLength = 0;
+                    }
 
-                        if (originalText.Length < 2) continue;
+                    currentChunk.Add(node);
+                    currentLength += nodeLength + SEPARATOR.Length;
+                }
+                if (currentChunk.Any()) chunks.Add(currentChunk);
 
-                        await Task.Delay(150);
+                foreach (var chunk in chunks)
+                {
+                    var sb = new StringBuilder();
+                    foreach (var node in chunk)
+                    {
+                        sb.Append(WebUtility.HtmlDecode(node.InnerText).Trim());
+                        sb.Append(SEPARATOR);
+                    }
 
-                        var result = await _translator.TranslateAsync(originalText, targetLanguage);
+                    string textToTranslate = sb.ToString();
 
-                        if (result != null)
+                    // Видаляємо останній розділювач
+                    if (textToTranslate.EndsWith(SEPARATOR))
+                        textToTranslate = textToTranslate.Substring(0, textToTranslate.Length - SEPARATOR.Length);
+
+
+                    await Task.Delay(1000);
+
+                    var result = await _translator.TranslateAsync(textToTranslate, targetLanguage);
+
+                    if (result != null)
+                    {
+                        string[] translatedParts = result.Translation.Split(new[] { SEPARATOR.Trim() }, StringSplitOptions.None);
+
+                        for (int i = 0; i < chunk.Count && i < translatedParts.Length; i++)
                         {
-                            node.InnerHtml = result.Translation;
+                            chunk[i].InnerHtml = translatedParts[i].Trim();
                         }
                     }
                 }
 
-                
                 return doc.DocumentNode.OuterHtml;
             }
             catch (Exception ex)
             {
-                return $"<div style='color:red; padding:10px; border:1px solid red; margin-bottom:10px;'>Помилка перекладу: {ex.Message}</div>" + htmlContent;
+                return $"<div style='background-color:#ffebee; color:#c62828; padding:10px; border:1px solid #ef9a9a;'>Blocked by Google or Error: {ex.Message}</div>" + htmlContent;
             }
         }
     }

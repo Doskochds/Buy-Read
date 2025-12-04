@@ -2,19 +2,18 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import api from '../api/axios';
 import DOMPurify from 'dompurify';
+import { useTranslation } from 'react-i18next';
 
 const ReadPage = () => {
-    const { chapterId } = useParams(); 
+    const { t } = useTranslation();
+    const { chapterId } = useParams();
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
-    
     const readType = searchParams.get('type');
 
     const [content, setContent] = useState("");
     const [title, setTitle] = useState("");
-    
     const [contentType, setContentType] = useState("html"); 
-    
     const [pdfUrl, setPdfUrl] = useState(null);
     const [loading, setLoading] = useState(true);
     const [isTranslating, setIsTranslating] = useState(false);
@@ -39,26 +38,20 @@ const ReadPage = () => {
                         setTitle("Читання книги");
                         setContent(data); 
                         setContentType("text");
-                    } 
-                    else {
-                        const fileResponse = await api.get(`/Books/${chapterId}/download`, {
-                            responseType: 'blob'
-                        });
+                    } else {
+                        const fileResponse = await api.get(`/Books/${chapterId}/download`, { responseType: 'blob' });
                         const file = new Blob([fileResponse.data], { type: 'application/pdf' });
-                        const fileURL = URL.createObjectURL(file);
-                        
-                        setPdfUrl(fileURL);
+                        setPdfUrl(URL.createObjectURL(file));
                         setContentType("pdf");
                         setTitle("Перегляд файлу");
                     }
-                } 
-                else {
+                } else {
                     await loadTextChapter();
                     setContentType("html");
                 }
             } catch (error) {
                 console.error("Помилка:", error);
-                alert("Не вдалося завантажити контент. Можливо, у вас немає доступу.");
+                alert(t('readPage.errorLoading'));
                 navigate(-1);
             } finally {
                 setLoading(false);
@@ -66,7 +59,7 @@ const ReadPage = () => {
         };
 
         loadContent();
-    }, [chapterId, readType, navigate]);
+    }, [chapterId, readType, navigate, t]);
 
     const loadTextChapter = async () => {
         const res = await api.get(`/Chapters/${chapterId}`);
@@ -84,10 +77,10 @@ const ReadPage = () => {
         try {
             if (lang === "uk") {
                 if (readType === 'file') {
-                     const response = await api.get(`/Books/${chapterId}/read`);
-                     setContent(response.data.data);
+                    const response = await api.get(`/Books/${chapterId}/read`);
+                    setContent(response.data.data);
                 } else {
-                     await loadTextChapter();
+                    await loadTextChapter();
                 }
             } else {
                 if (readType === 'file') {
@@ -111,19 +104,19 @@ const ReadPage = () => {
     return (
         <div style={styles.readerContainer}>
             <div style={styles.toolbar}>
-                <button onClick={() => navigate(-1)} style={styles.closeBtn}>← Назад</button>
-                
+                <button onClick={() => navigate(-1)} style={styles.closeBtn}>{t('readPage.back')}</button>
+
                 {contentType !== 'pdf' && (
                     <div style={styles.langSwitcher}>
                         <button style={currentLang === 'uk' ? styles.langBtnActive : styles.langBtn} onClick={() => handleTranslate('uk')} disabled={isTranslating}>🇺🇦</button>
-                        <button style={currentLang === 'en' ? styles.langBtnActive : styles.langBtn} onClick={() => handleTranslate('en')} disabled={isTranslating}>🇬🇧</button>
-                        <button style={currentLang === 'pl' ? styles.langBtnActive : styles.langBtn} onClick={() => handleTranslate('pl')} disabled={isTranslating}>🇵🇱</button>
+                        <button style={currentLang === 'en' ? styles.langBtnActive : styles.langBtn} onClick={() => handleTranslate('en')} disabled={isTranslating}>en</button>
+                        <button style={currentLang === 'es' ? styles.langBtnActive : styles.langBtn} onClick={() => handleTranslate('es')} disabled={isTranslating}>es</button>
                     </div>
                 )}
             </div>
 
             {loading ? (
-                 <div style={{textAlign: 'center', marginTop: '50px', fontSize: '1.2em'}}>⏳ Обробка книги...</div>
+                <div style={{ textAlign: 'center', marginTop: '50px', fontSize: '1.2em' }}>{t('readPage.loadingContent')}</div>
             ) : (
                 <>
                     <h1 style={styles.chapterTitle}>{title}</h1>
@@ -134,7 +127,7 @@ const ReadPage = () => {
                         </div>
                     ) : (
                         isTranslating ? (
-                            <div style={styles.skeletonWrapper}><p style={{textAlign: 'center', color: '#888'}}>🤖 Переклад...</p></div>
+                            <div style={styles.skeletonWrapper}><p style={{ textAlign: 'center', color: '#888' }}>{t('readPage.translating')}</p></div>
                         ) : (
                             <div 
                                 style={styles.htmlContent}
@@ -145,8 +138,8 @@ const ReadPage = () => {
                 </>
             )}
 
-            <div style={{marginTop: '50px', textAlign: 'center', borderTop: '1px solid #eee', paddingTop: '20px', paddingBottom: '40px'}}>
-                 <button onClick={() => navigate(-1)} style={styles.bigCloseBtn}>Завершити читання</button>
+            <div style={{ marginTop: '50px', textAlign: 'center', borderTop: '1px solid #eee', paddingTop: '20px', paddingBottom: '40px' }}>
+                <button onClick={() => navigate(-1)} style={styles.bigCloseBtn}>{t('readPage.finish')}</button>
             </div>
         </div>
     );
@@ -160,16 +153,7 @@ const styles = {
     langBtn: { padding: '6px 10px', cursor: 'pointer', border: '1px solid transparent', backgroundColor: '#f5f5f5', borderRadius: '6px', fontSize: '14px' },
     langBtnActive: { padding: '6px 10px', cursor: 'pointer', border: '1px solid #007bff', backgroundColor: '#e7f1ff', borderRadius: '6px', color: '#007bff', fontWeight: 'bold', fontSize: '14px' },
     chapterTitle: { textAlign: 'center', fontSize: '32px', marginBottom: '30px', marginTop: '10px', fontFamily: "'Merriweather', serif", color: '#222' },
-    
-    htmlContent: { 
-        fontSize: '20px', 
-        lineHeight: '1.8', 
-        color: '#333', 
-        fontFamily: "'Merriweather', 'Georgia', serif", 
-        textAlign: 'justify',
-        paddingBottom: '50px'
-    },
-    
+    htmlContent: { fontSize: '20px', lineHeight: '1.8', color: '#333', fontFamily: "'Merriweather', 'Georgia', serif", textAlign: 'justify', paddingBottom: '50px' },
     skeletonWrapper: { padding: '50px 0', textAlign: 'center' },
     bigCloseBtn: { padding: '12px 30px', backgroundColor: '#333', color: 'white', border: 'none', borderRadius: '30px', fontSize: '16px', cursor: 'pointer', fontWeight: 'bold' },
 };

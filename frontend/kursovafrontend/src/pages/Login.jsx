@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'; 
 import api from '../api/axios';
 
 const Login = () => {
-    const navigate = useNavigate(); // Хук для перенаправлення користувача
+    const { t } = useTranslation(); 
+    const navigate = useNavigate(); 
     const [formData, setFormData] = useState({
         login: '',
         password: ''
@@ -21,31 +23,20 @@ const Login = () => {
         setIsLoading(true);
 
         try {
-            // 1. Відправляємо запит
             const response = await api.post('/Account/login', formData);
-
-            // 2. Отримуємо токен з відповіді
             const { token, message } = response.data;
-
-            // 3. Зберігаємо токен у "кишеню" браузера (LocalStorage)
             localStorage.setItem('jwt-token', token);
-            
-            // (Опціонально) Зберігаємо ім'я користувача, щоб показати в шапці
             localStorage.setItem('username', formData.login);
-
-            alert(message); // "Вхід успішний"
-
-            // 4. Перекидаємо на каталог
+            alert(message); 
             navigate('/catalog'); 
-            
-            // Перезавантажуємо сторінку, щоб Axios підхопив токен (це простий варіант)
             window.location.reload(); 
 
         } catch (err) {
             if (err.response && err.response.data) {
-                setError(err.response.data.message || "Неправильний логін або пароль");
+                
+                setError(err.response.data.message || t('auth.error_invalid'));
             } else {
-                setError("Сервер не відповідає.");
+                setError(t('auth.error_server'));
             }
         } finally {
             setIsLoading(false);
@@ -55,12 +46,12 @@ const Login = () => {
     return (
         <div style={styles.container}>
             <div style={styles.card}>
-                <h2>Вхід</h2>
+                <h2>{t('auth.title')}</h2>
                 {error && <div style={styles.error}>{error}</div>}
 
                 <form onSubmit={handleSubmit} style={styles.form}>
                     <div style={styles.inputGroup}>
-                        <label>Логін</label>
+                        <label>{t('auth.label_login')}</label>
                         <input 
                             type="text" 
                             name="login" 
@@ -71,7 +62,7 @@ const Login = () => {
                         />
                     </div>
                     <div style={styles.inputGroup}>
-                        <label>Пароль</label>
+                        <label>{t('auth.label_password')}</label>
                         <input 
                             type="password" 
                             name="password" 
@@ -83,15 +74,15 @@ const Login = () => {
                     </div>
 
                     <button type="submit" disabled={isLoading} style={styles.button}>
-                        {isLoading ? 'Вхід...' : 'Увійти'}
+                        {isLoading ? t('auth.submitting') : t('auth.submit_btn')}
                     </button>
                 </form>
 
                 <p style={{marginTop: '15px', textAlign: 'center'}}>
-                    Немає акаунту? <Link to="/register" style={styles.link}>Зареєструватися</Link>
+                    {t('auth.no_account')} <Link to="/register" style={styles.link}>{t('auth.register_link')}</Link>
                 </p>
                 <p style={{marginTop: '5px', textAlign: 'center', fontSize: '0.9em'}}>
-                   <a href="#" style={{color: '#666'}}>Забули пароль?</a>
+                    <a href="#" style={{color: '#666'}}>{t('auth.forgot_pass')}</a>
                 </p>
             </div>
         </div>

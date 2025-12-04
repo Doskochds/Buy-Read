@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'; // Імпорт i18n
 import api from '../api/axios';
 
 const API_BASE_URL = "https://localhost:7025"; 
 
 const BookPage = () => {
+    const { t } = useTranslation();
     const { id } = useParams();
     const navigate = useNavigate();
     
@@ -17,7 +19,7 @@ const BookPage = () => {
     
     // Стан для форми коментарів
     const [newComment, setNewComment] = useState('');
-    const [newRating, setNewRating] = useState(5); // Оцінка за замовчуванням 5
+    const [newRating, setNewRating] = useState(5); 
     const [submittingComment, setSubmittingComment] = useState(false);
 
     // Авторизація та доступ
@@ -33,17 +35,18 @@ const BookPage = () => {
                 setBook(bookResponse.data);
 
                 // 2. Доступ (читання)
+                // ЛОГІКА ЗБЕРЕЖЕНА: Перевіряємо доступ через окремий запит
                 if (isLoggedIn) {
                     try {
                         const readResponse = await api.get(`/Books/${id}/read`);
                         setAccessInfo(readResponse.data); 
-                        setHasAccess(true);
+                        setHasAccess(true); // Якщо запит успішний - книга куплена
                     } catch (err) {
-                        setHasAccess(false);
+                        setHasAccess(false); // Якщо помилка (403/404) - книга не куплена
                     }
                 }
 
-                // 3. Глави (якщо є)
+                // 3. Глави
                 try {
                     const chaptersResponse = await api.get(`/Chapters/book/${id}`);
                     setChapters(chaptersResponse.data);
@@ -51,7 +54,7 @@ const BookPage = () => {
                     setChapters([]); 
                 }
 
-                // 4. Коментарі (за новим роутом контролера)
+                // 4. Коментарі
                 try {
                     const commentsResponse = await api.get(`/Comments/book/${id}`);
                     setComments(commentsResponse.data);
@@ -70,13 +73,20 @@ const BookPage = () => {
 
     const handleBuy = async () => {
         if (!isLoggedIn) return navigate('/login');
-        if (window.confirm(`Купити книгу "${book.title}" за ${book.price} грн?`)) {
+        
+        // Використовуємо t() з параметрами для повідомлення
+        const confirmMessage = t('book.buy_confirm_message', { 
+            title: book.title, 
+            price: book.price 
+        });
+
+        if (window.confirm(confirmMessage)) {
             try {
                 await api.post('/Orders/buy', { bookIds: [book.id] });
-                alert("Покупка успішна!");
-                window.location.reload(); 
+                alert(t('book.buy_success'));
+                window.location.reload(); // Перезавантаження оновить useEffect і перевірить доступ
             } catch (err) {
-                alert("Помилка покупки: " + (err.response?.data?.message || err.message));
+                alert(t('book.buy_error') + " " + (err.response?.data?.message || err.message));
             }
         }
     };
@@ -103,11 +113,11 @@ const BookPage = () => {
             link.click();
             link.parentNode.removeChild(link);
         } catch (error) {
-            alert("Помилка при скачуванні файлу");
+            alert(t('book.download_error'));
         }
     };
 
-        const handleAddComment = async () => {
+    const handleAddComment = async () => {
         if (!newComment.trim()) return;
         setSubmittingComment(true);
         try {
@@ -123,7 +133,7 @@ const BookPage = () => {
             const commentsResponse = await api.get(`/Comments/book/${id}`);
             setComments(commentsResponse.data);
         } catch (error) {
-            alert("Не вдалося додати коментар. Перевірте авторизацію.");
+            alert(t('book.comment_error'));
         } finally {
             setSubmittingComment(false);
         }
@@ -158,8 +168,8 @@ const BookPage = () => {
 
     const isFileBook = chapters.length === 0;
 
-    if (loading) return <div style={{textAlign: 'center', marginTop: '50px'}}>Завантаження...</div>;
-    if (!book) return <div style={{textAlign: 'center', marginTop: '50px'}}>Книгу не знайдено</div>;
+    if (loading) return <div style={{textAlign: 'center', marginTop: '50px'}}>{t('common.loading')}</div>;
+    if (!book) return <div style={{textAlign: 'center', marginTop: '50px'}}>{t('catalog.nothing_found')}</div>;
 
     return (
         <div style={styles.container}>
@@ -171,7 +181,7 @@ const BookPage = () => {
                             alt={book.title} 
                             style={{width: '100%', height: '100%', objectFit: 'cover'}}
                             onError={(e) => { e.target.style.display='none'; e.target.nextSibling.style.display='flex'; }} 
-                         />
+                          />
                     )}
                     <div style={{...styles.coverPlaceholder, display: book.coverImagePath ? 'none' : 'flex'}}>
                         <span style={{fontSize: '50px', marginBottom: '10px'}}>📚</span>
@@ -180,23 +190,24 @@ const BookPage = () => {
 
                 <div style={styles.actionBlock}>
                     <div style={styles.priceRow}>
-                        <span style={styles.priceLabel}>Вартість:</span>
-                        <span style={styles.priceValue}>{book.price} ₴</span>
+                        <span style={styles.priceLabel}>{t('book.price_label')}</span>
+                        <span style={styles.priceValue}>{book.price} {t('common.currency')}</span>
                     </div>
                     
+                    {/* ЛОГІКА ЗБЕРЕЖЕНА: !hasAccess показує кнопку Купити, інакше Читати */}
                     {!hasAccess ? (
-                        <button style={styles.buyButton} onClick={handleBuy}>Купити зараз</button>
+                        <button style={styles.buyButton} onClick={handleBuy}>{t('book.buy_btn')}</button>
                     ) : (
                         <div style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
-                            <button style={styles.readButton} onClick={handleRead}>📖 Читати</button>
+                            <button style={styles.readButton} onClick={handleRead}>{t('book.read_btn')}</button>
                             {isFileBook && (
-                                <button style={styles.downloadButton} onClick={handleDownload}>⬇️ Завантажити файл</button>
+                                <button style={styles.downloadButton} onClick={handleDownload}>{t('book.download_btn')}</button>
                             )}
                         </div>
                     )}
                     {hasAccess && isFileBook && (
                          <small style={{textAlign: 'center', color: '#666', fontSize: '12px'}}>
-                             Формат: Цілий файл
+                             {t('book.format_file')}
                          </small>
                     )}
                 </div>
@@ -205,27 +216,27 @@ const BookPage = () => {
             <div style={styles.content}>
                 <h1 style={styles.title}>{book.title}</h1>
                 <div style={styles.tabs}>
-                    <button style={activeTab === 'about' ? styles.tabActive : styles.tab} onClick={() => setActiveTab('about')}>Про твір</button>
+                    <button style={activeTab === 'about' ? styles.tabActive : styles.tab} onClick={() => setActiveTab('about')}>{t('book.about_tab')}</button>
                     {!isFileBook && (
                         <button style={activeTab === 'chapters' ? styles.tabActive : styles.tab} onClick={() => setActiveTab('chapters')}>
-                            Зміст <span style={styles.badge}>{chapters.length}</span>
+                            {t('book.chapters_tab')} <span style={styles.badge}>{chapters.length}</span>
                         </button>
                     )}
                     <button style={activeTab === 'comments' ? styles.tabActive : styles.tab} onClick={() => setActiveTab('comments')}>
-                        Коментарі <span style={styles.badge}>{comments.length}</span>
+                        {t('book.comments_tab')} <span style={styles.badge}>{comments.length}</span>
                     </button>
                 </div>
 
                 {activeTab === 'about' && (
                     <div style={styles.tabContent}>
-                        <div style={styles.descriptionBlock}><p>{book.description || "Опис відсутній..."}</p></div>
+                        <div style={styles.descriptionBlock}><p>{book.description || t('book.description_missing')}</p></div>
                         <div style={styles.infoGrid}>
-                            <div style={styles.infoItem}><span style={styles.label}>Автор:</span><span style={styles.infoValue}>{book.authorName}</span></div>
-                            <div style={styles.infoItem}><span style={styles.label}>Жанр:</span><span style={styles.infoValue}>{book.categoryName}</span></div>
+                            <div style={styles.infoItem}><span style={styles.label}>{t('book.author')}</span><span style={styles.infoValue}>{book.authorName}</span></div>
+                            <div style={styles.infoItem}><span style={styles.label}>{t('book.genre')}</span><span style={styles.infoValue}>{book.categoryName}</span></div>
                             <div style={styles.infoItem}>
-                                <span style={styles.label}>Тип:</span>
+                                <span style={styles.label}>{t('book.type')}</span>
                                 <span style={styles.infoValue}>
-                                    {isFileBook ? "Цілий твір (Файл)" : "Розділений твір (Глави)"}
+                                    {isFileBook ? t('book.type_file') : t('book.type_chapters')}
                                 </span>
                             </div>
                         </div>
@@ -239,10 +250,10 @@ const BookPage = () => {
                                 <div key={chapter.id} style={styles.chapterItem}>
                                     <span>{chapter.title}</span>
                                     {hasAccess ? (
-                                        <button style={styles.smallReadBtn} onClick={() => navigate(`/read/${chapter.id}`)}>Читати</button>
-                                    ) : (<span style={{fontSize: '0.8em', color: '#999'}}>🔒</span>)}
+                                        <button style={styles.smallReadBtn} onClick={() => navigate(`/read/${chapter.id}`)}>{t('common.read')}</button>
+                                    ) : (<span style={{fontSize: '0.8em', color: '#999'}}>{t('book.access_locked')}</span>)}
                                 </div>
-                            )) : <p style={{color: '#777'}}>Зміст поки порожній.</p>}
+                            )) : <p style={{color: '#777'}}>{t('book.chapters_empty')}</p>}
                         </div>
                     </div>
                 )}
@@ -252,17 +263,17 @@ const BookPage = () => {
                         <div style={styles.commentFormBlock}>
                             {isLoggedIn ? (
                                 <div style={{display: 'flex', flexDirection: 'column', gap: '15px', marginBottom: '30px'}}>
-                                    <h4 style={{margin: '0 0 5px 0', color: '#2c3e50'}}>Залишити відгук:</h4>
+                                    <h4 style={{margin: '0 0 5px 0', color: '#2c3e50'}}>{t('book.leave_comment')}</h4>
 
                                     <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-                                        <span style={{fontSize: '14px', color: '#666'}}>Ваша оцінка:</span>
+                                        <span style={{fontSize: '14px', color: '#666'}}>{t('book.your_rating')}</span>
                                         <div>{renderStars(newRating, true)}</div>
                                     </div>
 
                                     <textarea 
                                         style={styles.textArea} 
                                         rows="3" 
-                                        placeholder="Напишіть вашу думку про книгу..." 
+                                        placeholder={t('book.comment_placeholder')} 
                                         value={newComment}
                                         onChange={(e) => setNewComment(e.target.value)}
                                     />
@@ -271,13 +282,13 @@ const BookPage = () => {
                                         onClick={handleAddComment} 
                                         disabled={submittingComment || !newComment.trim()}
                                     >
-                                        {submittingComment ? 'Відправка...' : 'Опублікувати'}
+                                        {submittingComment ? t('book.sending') : t('book.publish_btn')}
                                     </button>
                                 </div>
                             ) : (
                                 <div style={styles.loginPrompt}>
-                                    <p>Увійдіть в акаунт, щоб залишати коментарі та оцінки</p>
-                                    <button style={styles.loginBtn} onClick={() => navigate('/login')}>Увійти</button>
+                                    <p>{t('auth.login_prompt')}</p>
+                                    <button style={styles.loginBtn} onClick={() => navigate('/login')}>{t('auth.login_btn')}</button>
                                 </div>
                             )}
                         </div>
@@ -288,7 +299,7 @@ const BookPage = () => {
                                     <div key={comment.id} style={styles.commentItem}>
                                         <div style={styles.commentHeader}>
                                             <div style={{display: 'flex', flexDirection: 'column'}}>
-                                                <span style={styles.commentUser}>{comment.userName || "Користувач"}</span>
+                                                <span style={styles.commentUser}>{comment.userName || t('book.user_default')}</span>
                                                 <div>{renderStars(comment.rating || 0)}</div>
                                             </div>
                                             <span style={styles.commentDate}>
@@ -301,7 +312,7 @@ const BookPage = () => {
                             </div>
                         ) : (
                             <div style={{textAlign: 'center', padding: '20px', color: '#777'}}>
-                                <p>Ще немає відгуків. Будьте першим!</p>
+                                <p>{t('book.no_comments')}</p>
                             </div>
                         )}
                     </div>

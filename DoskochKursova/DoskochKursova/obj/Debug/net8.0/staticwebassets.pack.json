@@ -245,6 +245,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\uploads\\covers\\5665853f-c93e-43e6-ad00-9eaa579b63a6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\covers\\5665853f-c93e-43e6-ad00-9eaa579b63a6.jpg"
+    },
+    {
       "Id": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\uploads\\covers\\97c64c71-5459-47e4-ba6a-3f8c00a588d9.png",
       "PackagePath": "staticwebassets\\uploads\\covers\\97c64c71-5459-47e4-ba6a-3f8c00a588d9.png"
     },
@@ -263,6 +267,10 @@
     {
       "Id": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\uploads\\covers\\f47549bf-920f-434b-b485-5fbcd3caac0c.png",
       "PackagePath": "staticwebassets\\uploads\\covers\\f47549bf-920f-434b-b485-5fbcd3caac0c.png"
+    },
+    {
+      "Id": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\uploads\\covers\\f96890a8-3405-4772-8f92-d0bf8f3567ad.jpg",
+      "PackagePath": "staticwebassets\\uploads\\covers\\f96890a8-3405-4772-8f92-d0bf8f3567ad.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.DoskochKursova.Microsoft.AspNetCore.StaticWebAssets.props",

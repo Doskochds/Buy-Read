@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'; 
 import api from '../api/axios';
 
 const MyLibrary = () => {
+    const { t } = useTranslation();
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
@@ -13,8 +15,7 @@ const MyLibrary = () => {
                 const response = await api.get('/Orders/my-history');
                 setOrders(response.data);
             } catch (error) {
-                console.error("Помилка завантаження бібліотеки:", error);
-                // Якщо токен протух або його немає - на логін
+                console.error(t('library.error_loading'), error);
                 if (error.response && error.response.status === 401) {
                     navigate('/login');
                 }
@@ -24,34 +25,30 @@ const MyLibrary = () => {
         };
 
         fetchLibrary();
-    }, [navigate]);
+    }, [navigate, t]);
 
-    // --- ЛОГІКА ВІДОБРАЖЕННЯ ---
-    // API повертає Замовлення, в яких є Товари (Items).
-    // Нам треба дістати всі книги з усіх замовлень в один плоский список.
     const allBooks = orders.flatMap(order => order.items);
 
-    if (loading) return <div style={{textAlign: 'center', marginTop: '50px'}}>Завантаження бібліотеки...</div>;
+    if (loading) return <div style={{textAlign: 'center', marginTop: '50px'}}>{t('library.loading')}</div>;
 
     return (
         <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '20px' }}>
-            <h1>Моя бібліотека</h1>
+            <h1>{t('library.title')}</h1>
 
             {allBooks.length === 0 ? (
                 <div style={{textAlign: 'center', color: '#777', marginTop: '50px'}}>
-                    <p>Ви ще нічого не купили.</p>
+                    <p>{t('library.empty_text')}</p>
                     <button 
                         onClick={() => navigate('/catalog')}
                         style={styles.linkButton}
                     >
-                        Перейти до каталогу
+                        {t('library.catalog_btn')}
                     </button>
                 </div>
             ) : (
                 <div style={styles.grid}>
                     {allBooks.map((item, index) => (
                         <div key={index} style={styles.card}>
-                            {/* Іконка книги */}
                             <div style={styles.cover}>📖</div>
                             
                             <div style={{padding: '15px'}}>
@@ -60,9 +57,9 @@ const MyLibrary = () => {
                                 
                                 <button 
                                     style={styles.readButton}
-                                    onClick={() => Maps('/book/' + item.bookId)} 
+                                    onClick={() => navigate('/book/' + item.bookId)} 
                                 >
-                                    Читати
+                                    {t('library.read_btn')}
                                 </button>
                             </div>
                         </div>

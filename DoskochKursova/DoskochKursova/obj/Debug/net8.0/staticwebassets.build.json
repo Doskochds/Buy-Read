@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1h8qP4mfz8GgVz4n4A6DlxoYIrzD20JNISoYtTdZ2Zk=",
+  "Hash": "H8vJk8ZZ8S5FYNRQWSp1uzg7suZ+2aXvBXuKO7zfn4s=",
   "Source": "DoskochKursova",
   "BasePath": "_content/DoskochKursova",
   "Mode": "Default",
@@ -2335,6 +2335,25 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\uploads\\covers\\5665853f-c93e-43e6-ad00-9eaa579b63a6.jpg",
+      "SourceId": "DoskochKursova",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\",
+      "BasePath": "_content/DoskochKursova",
+      "RelativePath": "uploads/covers/5665853f-c93e-43e6-ad00-9eaa579b63a6.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\covers\\5665853f-c93e-43e6-ad00-9eaa579b63a6.jpg"
+    },
+    {
       "Identity": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\uploads\\covers\\97c64c71-5459-47e4-ba6a-3f8c00a588d9.png",
       "SourceId": "DoskochKursova",
       "SourceType": "Discovered",
@@ -2428,6 +2447,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\covers\\f47549bf-920f-434b-b485-5fbcd3caac0c.png"
+    },
+    {
+      "Identity": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\uploads\\covers\\f96890a8-3405-4772-8f92-d0bf8f3567ad.jpg",
+      "SourceId": "DoskochKursova",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\hnukursova\\KursovaWB\\KursovaWB\\Buy-Read\\DoskochKursova\\DoskochKursova\\wwwroot\\",
+      "BasePath": "_content/DoskochKursova",
+      "RelativePath": "uploads/covers/f96890a8-3405-4772-8f92-d0bf8f3567ad.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\covers\\f96890a8-3405-4772-8f92-d0bf8f3567ad.jpg"
     }
   ]
 }

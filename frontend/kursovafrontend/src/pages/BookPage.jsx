@@ -8,15 +8,19 @@ const BookPage = () => {
     const { id } = useParams();
     const navigate = useNavigate();
     
+    // Дані книги
     const [book, setBook] = useState(null);
     const [chapters, setChapters] = useState([]);
     const [comments, setComments] = useState([]);
     const [loading, setLoading] = useState(true);
     const [activeTab, setActiveTab] = useState('about');
     
+    // Стан для форми коментарів
     const [newComment, setNewComment] = useState('');
+    const [newRating, setNewRating] = useState(5); // Оцінка за замовчуванням 5
     const [submittingComment, setSubmittingComment] = useState(false);
 
+    // Авторизація та доступ
     const isLoggedIn = !!localStorage.getItem('jwt-token');
     const [accessInfo, setAccessInfo] = useState(null); 
     const [hasAccess, setHasAccess] = useState(false);
@@ -24,9 +28,11 @@ const BookPage = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
+                // 1. Книга
                 const bookResponse = await api.get(`/Books/${id}`);
                 setBook(bookResponse.data);
 
+                // 2. Доступ (читання)
                 if (isLoggedIn) {
                     try {
                         const readResponse = await api.get(`/Books/${id}/read`);
@@ -37,6 +43,7 @@ const BookPage = () => {
                     }
                 }
 
+                // 3. Глави (якщо є)
                 try {
                     const chaptersResponse = await api.get(`/Chapters/book/${id}`);
                     setChapters(chaptersResponse.data);
@@ -44,6 +51,7 @@ const BookPage = () => {
                     setChapters([]); 
                 }
 
+                // 4. Коментарі (за новим роутом контролера)
                 try {
                     const commentsResponse = await api.get(`/Comments/book/${id}`);
                     setComments(commentsResponse.data);
@@ -75,7 +83,6 @@ const BookPage = () => {
 
     const handleRead = () => {
         if (!hasAccess) return;
-
         if (chapters.length > 0) {
             navigate(`/read/${chapters[0].id}`);
         } else {
@@ -86,10 +93,8 @@ const BookPage = () => {
     const handleDownload = async () => {
         try {
             const response = await api.get(`/Books/${id}/download`, { responseType: 'blob' });
-            
             let extension = "pdf";
             if (response.data.type === "text/plain") extension = "txt";
-
             const url = window.URL.createObjectURL(new Blob([response.data]));
             const link = document.createElement('a');
             link.href = url;
@@ -102,20 +107,47 @@ const BookPage = () => {
         }
     };
 
-    const handleAddComment = async () => {
+        const handleAddComment = async () => {
         if (!newComment.trim()) return;
         setSubmittingComment(true);
         try {
-            await api.post('/Comments', { bookId: id, text: newComment });
-            setNewComment('');
+            await api.post('/Comments', { 
+                bookId: id,     
+                text: newComment, 
+                rating: newRating 
+            });
             
+            setNewComment('');
+            setNewRating(10);
+
             const commentsResponse = await api.get(`/Comments/book/${id}`);
             setComments(commentsResponse.data);
         } catch (error) {
-            alert("Не вдалося додати коментар");
+            alert("Не вдалося додати коментар. Перевірте авторизацію.");
         } finally {
             setSubmittingComment(false);
         }
+    };
+
+    const renderStars = (rating, interactive = false) => {
+        return [...Array(10)].map((_, i) => {
+            const starValue = i + 1;
+            const isActive = starValue <= rating;
+            return (
+                <span 
+                    key={i} 
+                    style={{
+                        color: isActive ? '#ffc107' : '#e4e5e9', 
+                        cursor: interactive ? 'pointer' : 'default',
+                        fontSize: interactive ? '24px' : '18px',
+                        marginRight: '2px'
+                    }}
+                    onClick={interactive ? () => setNewRating(starValue) : undefined}
+                >
+                    ★
+                </span>
+            );
+        });
     };
 
     const getCoverUrl = (path) => {
@@ -219,11 +251,18 @@ const BookPage = () => {
                     <div style={styles.tabContent}>
                         <div style={styles.commentFormBlock}>
                             {isLoggedIn ? (
-                                <div style={{display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '30px'}}>
+                                <div style={{display: 'flex', flexDirection: 'column', gap: '15px', marginBottom: '30px'}}>
+                                    <h4 style={{margin: '0 0 5px 0', color: '#2c3e50'}}>Залишити відгук:</h4>
+
+                                    <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+                                        <span style={{fontSize: '14px', color: '#666'}}>Ваша оцінка:</span>
+                                        <div>{renderStars(newRating, true)}</div>
+                                    </div>
+
                                     <textarea 
                                         style={styles.textArea} 
                                         rows="3" 
-                                        placeholder="Напишіть ваш відгук..." 
+                                        placeholder="Напишіть вашу думку про книгу..." 
                                         value={newComment}
                                         onChange={(e) => setNewComment(e.target.value)}
                                     />
@@ -232,12 +271,12 @@ const BookPage = () => {
                                         onClick={handleAddComment} 
                                         disabled={submittingComment || !newComment.trim()}
                                     >
-                                        {submittingComment ? 'Відправка...' : 'Залишити коментар'}
+                                        {submittingComment ? 'Відправка...' : 'Опублікувати'}
                                     </button>
                                 </div>
                             ) : (
                                 <div style={styles.loginPrompt}>
-                                    <p>Увійдіть в акаунт, щоб залишати коментарі</p>
+                                    <p>Увійдіть в акаунт, щоб залишати коментарі та оцінки</p>
                                     <button style={styles.loginBtn} onClick={() => navigate('/login')}>Увійти</button>
                                 </div>
                             )}
@@ -248,8 +287,13 @@ const BookPage = () => {
                                 {comments.map(comment => (
                                     <div key={comment.id} style={styles.commentItem}>
                                         <div style={styles.commentHeader}>
-                                            <span style={styles.commentUser}>{comment.userName || "Користувач"}</span>
-                                            <span style={styles.commentDate}>{new Date(comment.createdAt).toLocaleDateString()}</span>
+                                            <div style={{display: 'flex', flexDirection: 'column'}}>
+                                                <span style={styles.commentUser}>{comment.userName || "Користувач"}</span>
+                                                <div>{renderStars(comment.rating || 0)}</div>
+                                            </div>
+                                            <span style={styles.commentDate}>
+                                                {comment.createdAt ? new Date(comment.createdAt).toLocaleDateString() : ''}
+                                            </span>
                                         </div>
                                         <p style={styles.commentText}>{comment.text}</p>
                                     </div>
@@ -257,7 +301,7 @@ const BookPage = () => {
                             </div>
                         ) : (
                             <div style={{textAlign: 'center', padding: '20px', color: '#777'}}>
-                                <p>Ще немає коментарів. Будьте першим!</p>
+                                <p>Ще немає відгуків. Будьте першим!</p>
                             </div>
                         )}
                     </div>
@@ -295,16 +339,16 @@ const styles = {
     chapterItem: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '15px 10px', borderBottom: '1px solid #eee', color: '#2c3e50' },
     smallReadBtn: { padding: '5px 15px', backgroundColor: '#fff', border: '1px solid #28a745', color: '#28a745', borderRadius: '4px', cursor: 'pointer', fontSize: '14px', fontWeight: 'bold' },
     commentList: { display: 'flex', flexDirection: 'column', gap: '15px' },
-    commentItem: { padding: '15px', backgroundColor: '#fff', border: '1px solid #eee', borderRadius: '8px' },
-    commentHeader: { display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '14px' },
-    commentUser: { fontWeight: 'bold', color: '#2c3e50' },
-    commentDate: { color: '#95a5a6' },
-    commentText: { margin: 0, color: '#444', lineHeight: '1.5' },
+    commentItem: { padding: '20px', backgroundColor: '#fff', border: '1px solid #eee', borderRadius: '8px' },
+    commentHeader: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '10px', fontSize: '14px' },
+    commentUser: { fontWeight: 'bold', color: '#2c3e50', fontSize: '16px', display: 'block', marginBottom: '4px' },
+    commentDate: { color: '#95a5a6', fontSize: '12px' },
+    commentText: { margin: 0, color: '#444', lineHeight: '1.6', fontSize: '15px' },
     commentFormBlock: { marginBottom: '30px', paddingBottom: '20px', borderBottom: '1px solid #eee' },
-    textArea: { width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #ddd', fontSize: '14px', resize: 'vertical', fontFamily: 'inherit' },
-    submitBtn: { alignSelf: 'flex-start', padding: '10px 20px', backgroundColor: '#2c3e50', color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' },
-    loginPrompt: { padding: '20px', backgroundColor: '#f8f9fa', borderRadius: '8px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' },
-    loginBtn: { padding: '8px 20px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer', fontWeight: '500' }
+    textArea: { width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #ddd', fontSize: '14px', resize: 'vertical', fontFamily: 'inherit', boxSizing: 'border-box' },
+    submitBtn: { alignSelf: 'flex-start', padding: '12px 24px', backgroundColor: '#2c3e50', color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold', marginTop: '10px' },
+    loginPrompt: { padding: '30px', backgroundColor: '#f8f9fa', borderRadius: '8px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px' },
+    loginBtn: { padding: '10px 25px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer', fontWeight: '500', fontSize: '15px' }
 };
 
 export default BookPage;
